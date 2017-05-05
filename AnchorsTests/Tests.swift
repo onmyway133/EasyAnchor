@@ -1,6 +1,14 @@
+//
+//  Tests.swift
+//  Anchors
+//
+//  Created by Khoa Pham on 05/05/2017.
+//  Copyright © 2017 Khoa Pham. All rights reserved.
+//
+
 import XCTest
 
-class macOSTests: XCTestCase {
+class Tests: XCTestCase {
 
   override func setUp() {
     super.setUp()
