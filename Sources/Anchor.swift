@@ -3,6 +3,8 @@ import UIKit
 public class Anchor {
   private let view: UIView
 
+  // key: attribute
+  // value: constant
   fileprivate var attributes: [NSLayoutAttribute: CGFloat] = [:]
 
   init(view: UIView) {
@@ -124,5 +126,18 @@ public extension Anchor {
 
   var center: Anchor {
     return centerX.centerY
+  }
+}
+
+// MARK: - Methods
+
+public extension Anchor {
+
+  func edges(insets: UIEdgeInsets) -> Self {
+    attributes[.top] = insets.top
+    attributes[.left] = insets.left
+    attributes[.right] = insets.right
+    attributes[.bottom] = insets.bottom
+    return self
   }
 }
