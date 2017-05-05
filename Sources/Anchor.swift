@@ -12,6 +12,7 @@ public class Anchor {
   fileprivate var identifierValue: String?
   fileprivate var referenceBlock: ((NSLayoutConstraint) -> Void)?
   fileprivate var relation: NSLayoutRelation = .equal
+  fileprivate var anotherAnchor: Anchor?
 
   init(view: UIView) {
     self.view = view
@@ -179,16 +180,19 @@ public extension Anchor {
 
   func equal(_ anchor: Anchor) -> Self {
     relation = .equal
+    anotherAnchor = anchor
     return self
   }
 
   func lessThanOrEqual(_ anchor: Anchor) -> Self {
     relation = .lessThanOrEqual
+    anotherAnchor = anchor
     return self
   }
 
   func greaterThanOrEqual(_ anchor: Anchor) -> Self {
     relation = .greaterThanOrEqual
+    anotherAnchor = anchor
     return self
   }
 }
