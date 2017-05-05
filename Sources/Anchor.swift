@@ -15,6 +15,7 @@ public class Anchor {
   fileprivate var anotherAnchor: Anchor?
 
   init(view: UIView) {
+    view.translatesAutoresizingMaskIntoConstraints = false
     self.view = view
   }
 }
@@ -194,5 +195,14 @@ public extension Anchor {
     relation = .greaterThanOrEqual
     anotherAnchor = anchor
     return self
+  }
+}
+
+// MARK: - Constraint
+
+extension Anchor {
+
+  func output() -> [NSLayoutConstraint] {
+    return []
   }
 }
