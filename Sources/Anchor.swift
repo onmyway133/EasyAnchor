@@ -113,3 +113,16 @@ public extension Anchor {
     return self
   }
 }
+
+// MARK: - Conveninent Attributes
+
+public extension Anchor {
+  var edges: Anchor {
+    attributes.removeAll()
+    return top.right.bottom.left
+  }
+
+  var center: Anchor {
+    return centerX.centerY
+  }
+}
