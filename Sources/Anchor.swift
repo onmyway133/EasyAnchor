@@ -6,6 +6,11 @@ public class Anchor {
   // key: attribute
   // value: constant
   fileprivate var attributes: [NSLayoutAttribute: CGFloat] = [:]
+  fileprivate var constantValue: CGFloat?
+  fileprivate var multiplierValue: CGFloat?
+  fileprivate var priorityValue: CGFloat?
+  fileprivate var identifierValue: String?
+  fileprivate var referenceBlock: ((NSLayoutConstraint) -> Void)?
 
   init(view: UIView) {
     self.view = view
@@ -138,6 +143,31 @@ public extension Anchor {
     attributes[.left] = insets.left
     attributes[.right] = insets.right
     attributes[.bottom] = insets.bottom
+    return self
+  }
+
+  func constant(_ value: CGFloat) -> Self {
+    constantValue = value
+    return self
+  }
+
+  func multiplier(_ value: CGFloat) -> Self {
+    multiplierValue = value
+    return self
+  }
+
+  func priority(_ value: CGFloat) -> Self {
+    priorityValue = value
+    return self
+  }
+
+  func id(_ value: String) -> Self {
+    identifierValue = value
+    return self
+  }
+
+  func ref(_ block: @escaping (NSLayoutConstraint) -> Void) -> Self {
+    referenceBlock = block
     return self
   }
 }
