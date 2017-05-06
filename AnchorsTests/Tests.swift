@@ -46,7 +46,7 @@ class Tests: XCTestCase {
     let view = UIView()
     superview.addSubview(view)
 
-    let constraints = Anchor(view: view).center.constant(10).ref({ constraint = $0.first }).constraints()
+    let constraints = view.anchor.center.constant(10).ref({ constraint = $0.first }).constraints()
     XCTAssertEqual(constraints.count, 2)
     XCTAssertNotNil(constraint)
     XCTAssertTrue(constraint?.firstAttribute == .centerX)
@@ -58,7 +58,7 @@ class Tests: XCTestCase {
     let view = UIView()
     superview.addSubview(view)
 
-    let constraints = Anchor(view: view).width.height.equal.to(10).constraints()
+    let constraints = view.anchor.width.height.equal.to(10).constraints()
     XCTAssertEqual(constraints.count, 2)
     XCTAssertTrue(constraints.contains(where: {
       $0.firstAttribute == .width && $0.constant == 10 }))
@@ -110,6 +110,15 @@ class Tests: XCTestCase {
       $0.firstAttribute == .top && $0.firstItem as! NSObject == view1 }))
     XCTAssertTrue(constraints.contains(where: {
       $0.firstAttribute == .top && $0.secondItem as! NSObject == view2 }))
+  }
+
+  func testNoAnchor() {
+    let superview = UIView()
+    let view = UIView()
+    superview.addSubview(view)
+
+    let constraints = view.anchor.edges.constraints()
+    XCTAssertEqual(constraints.count, 4)
   }
 
   func testRatio() {
