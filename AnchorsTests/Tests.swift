@@ -20,10 +20,11 @@ class Tests: XCTestCase {
   }
 
   func testConfig() {
-    let anchor = Anchor(view: UIView()).center.constant(10).multiplier(1.5).priority(999)
+    let anchor = Anchor(view: UIView()).center.constant(10).multiplier(1.5).priority(999).id("pinToTop")
     XCTAssertEqual(anchor.pins.count, 2)
     XCTAssertEqual(anchor.multiplierValue, 1.5)
     XCTAssertEqual(anchor.priorityValue, 999)
+    XCTAssertEqual(anchor.identifierValue, "pinToTop")
     XCTAssertEqual(anchor.pins.contains(where: { $0.attribute == .centerX && $0.constant == 10 }), true)
     XCTAssertEqual(anchor.pins.contains(where: { $0.attribute == .centerY && $0.constant == 10 }), true)
   }
