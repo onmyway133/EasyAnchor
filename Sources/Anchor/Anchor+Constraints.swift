@@ -20,7 +20,7 @@ public extension Anchor {
 
 // MARK: - Output Helper
 
-extension Anchor {
+fileprivate extension Anchor {
   func output() -> [NSLayoutConstraint] {
     switch toValue {
     case .anchor(let anchor):
