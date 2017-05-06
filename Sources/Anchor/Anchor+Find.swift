@@ -2,6 +2,10 @@ import UIKit
 
 public extension Anchor {
   func find(_ attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
+    guard let view = item as? UIView else {
+      return nil
+    }
+
     var constraints = view.superview?.constraints
 
     if attribute == .width || attribute == .height {

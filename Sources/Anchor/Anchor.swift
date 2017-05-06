@@ -17,7 +17,7 @@ public class Anchor {
     }
   }
 
-  let view: UIView
+  let item: AnyObject
 
   // key: attribute
   // value: constant
@@ -31,6 +31,11 @@ public class Anchor {
 
   init(view: UIView) {
     view.translatesAutoresizingMaskIntoConstraints = false
-    self.view = view
+    self.item = view
+  }
+
+  @available(iOS 9, *)
+  init(layoutGuide: UILayoutGuide) {
+    self.item = layoutGuide
   }
 }

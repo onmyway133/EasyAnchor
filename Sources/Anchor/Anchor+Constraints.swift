@@ -28,7 +28,7 @@ fileprivate extension Anchor {
     case .size:
       return outputForSize()
     case .none:
-      if let superview = view.superview {
+      if let superview = (item as? UIView)?.superview {
         return output(anchor: Anchor(view: superview))
       } else {
         return []
@@ -42,7 +42,7 @@ fileprivate extension Anchor {
         return $0.attribute == .width || $0.attribute == .height
       })
       .map({
-        let constraint = NSLayoutConstraint(item: view,
+        let constraint = NSLayoutConstraint(item: item,
                                             attribute: $0.attribute,
                                             relatedBy: relationValue,
                                             toItem: nil,
@@ -58,10 +58,10 @@ fileprivate extension Anchor {
     let pairs = zip(pins, anotherPins)
 
     return pairs.map({ pin, anotherPin in
-      let constraint = NSLayoutConstraint(item: view,
+      let constraint = NSLayoutConstraint(item: item,
                                           attribute: pin.attribute,
                                           relatedBy: relationValue,
-                                          toItem: anotherAnchor.view,
+                                          toItem: anotherAnchor.item,
                                           attribute: anotherPin.attribute,
                                           multiplier: multiplierValue,
                                           constant: pin.constant)
