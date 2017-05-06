@@ -19,6 +19,8 @@
 		D296836B1EBDBBA7001E62CB /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29683611EBDBB9D001E62CB /* Anchor.swift */; };
 		D296836D1EBDBBC5001E62CB /* Anchor+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296836C1EBDBBC5001E62CB /* Anchor+Attributes.swift */; };
 		D296836E1EBDBBC5001E62CB /* Anchor+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296836C1EBDBBC5001E62CB /* Anchor+Attributes.swift */; };
+		D29683701EBDBBF8001E62CB /* Anchor+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296836F1EBDBBF8001E62CB /* Anchor+Convenience.swift */; };
+		D29683711EBDBBF8001E62CB /* Anchor+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296836F1EBDBBF8001E62CB /* Anchor+Convenience.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* Anchors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Anchors.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* Anchors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Anchors.framework */; };
 /* End PBXBuildFile section */
@@ -47,6 +49,7 @@
 		D29683611EBDBB9D001E62CB /* Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
 		D29683631EBDBB9D001E62CB /* View+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		D296836C1EBDBBC5001E62CB /* Anchor+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+Attributes.swift"; sourceTree = "<group>"; };
+		D296836F1EBDBBF8001E62CB /* Anchor+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+Convenience.swift"; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
 		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* Anchors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Anchors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +101,7 @@
 			children = (
 				D29683611EBDBB9D001E62CB /* Anchor.swift */,
 				D296836C1EBDBBC5001E62CB /* Anchor+Attributes.swift */,
+				D296836F1EBDBBF8001E62CB /* Anchor+Convenience.swift */,
 			);
 			path = Anchor;
 			sourceTree = "<group>";
@@ -341,6 +345,7 @@
 			files = (
 				D29683691EBDBBA5001E62CB /* View+Extensions.swift in Sources */,
 				D296836A1EBDBBA7001E62CB /* Anchor.swift in Sources */,
+				D29683701EBDBBF8001E62CB /* Anchor+Convenience.swift in Sources */,
 				D29683521EBD19D2001E62CB /* Anchors.swift in Sources */,
 				D296836D1EBDBBC5001E62CB /* Anchor+Attributes.swift in Sources */,
 			);
@@ -361,6 +366,7 @@
 			files = (
 				D29683681EBDBBA5001E62CB /* View+Extensions.swift in Sources */,
 				D296836B1EBDBBA7001E62CB /* Anchor.swift in Sources */,
+				D29683711EBDBBF8001E62CB /* Anchor+Convenience.swift in Sources */,
 				D29683531EBD19D2001E62CB /* Anchors.swift in Sources */,
 				D296836E1EBDBBC5001E62CB /* Anchor+Attributes.swift in Sources */,
 			);

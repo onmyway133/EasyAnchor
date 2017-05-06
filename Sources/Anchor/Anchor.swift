@@ -35,19 +35,6 @@ public class Anchor {
   }
 }
 
-// MARK: - Conveninent Attributes
-
-public extension Anchor {
-  var edges: Anchor {
-    pins.removeAll()
-    return top.right.bottom.left
-  }
-
-  var center: Anchor {
-    return centerX.centerY
-  }
-}
-
 // MARK: - Configuration
 
 public extension Anchor {
