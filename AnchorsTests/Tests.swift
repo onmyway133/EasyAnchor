@@ -27,4 +27,23 @@ class Tests: XCTestCase {
     XCTAssertEqual(anchor.pins.contains(where: { $0.attribute == .centerX && $0.constant == 10 }), true)
     XCTAssertEqual(anchor.pins.contains(where: { $0.attribute == .centerY && $0.constant == 10 }), true)
   }
+
+  func testSuperview() {
+    let constraints = Anchor(view: UIView()).center.constraints()
+    XCTAssertEqual(constraints.isEmpty, true)
+  }
+
+  func testConstraints() {
+    var constraint: NSLayoutConstraint?
+
+    let superview = UIView()
+    let view = UIView()
+    superview.addSubview(view)
+
+    let constraints = Anchor(view: view).center.constant(10).ref({ constraint = $0.first }).constraints()
+    XCTAssertEqual(constraints.count, 2)
+    XCTAssertNotNil(constraint)
+    XCTAssertTrue(constraint?.firstAttribute == .centerX)
+    XCTAssertTrue(constraint?.constant == 10)
+  }
 }
