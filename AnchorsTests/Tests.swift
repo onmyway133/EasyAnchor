@@ -6,17 +6,17 @@ class Tests: XCTestCase {
   func testPins() {
     let anchor = Anchor(view: UIView()).center
     XCTAssertEqual(anchor.pins.count, 2)
-    XCTAssertEqual(anchor.pins.contains(where: { $0.attribute == .centerX }), true)
-    XCTAssertEqual(anchor.pins.contains(where: { $0.attribute == .centerY }), true)
+    XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .centerX }))
+    XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .centerY }))
   }
 
   func testInsets() {
     let anchor = Anchor(view: UIView()).edges.insets(UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4))
     XCTAssertEqual(anchor.pins.count, 4)
-    XCTAssertEqual(anchor.pins.contains(where: { $0.attribute == .top && $0.constant == 1 }), true)
-    XCTAssertEqual(anchor.pins.contains(where: { $0.attribute == .left && $0.constant == 2 }), true)
-    XCTAssertEqual(anchor.pins.contains(where: { $0.attribute == .bottom && $0.constant == 3 }), true)
-    XCTAssertEqual(anchor.pins.contains(where: { $0.attribute == .right && $0.constant == 4 }), true)
+    XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .top && $0.constant == 1 }))
+    XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .left && $0.constant == 2 }))
+    XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .bottom && $0.constant == 3 }))
+    XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .right && $0.constant == 4 }))
   }
 
   func testConfig() {
@@ -25,8 +25,8 @@ class Tests: XCTestCase {
     XCTAssertEqual(anchor.multiplierValue, 1.5)
     XCTAssertEqual(anchor.priorityValue, 999)
     XCTAssertEqual(anchor.identifierValue, "pinToTop")
-    XCTAssertEqual(anchor.pins.contains(where: { $0.attribute == .centerX && $0.constant == 10 }), true)
-    XCTAssertEqual(anchor.pins.contains(where: { $0.attribute == .centerY && $0.constant == 10 }), true)
+    XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .centerX && $0.constant == 10 }))
+    XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .centerY && $0.constant == 10 }))
   }
 
   func testRelation() {
@@ -51,5 +51,27 @@ class Tests: XCTestCase {
     XCTAssertNotNil(constraint)
     XCTAssertTrue(constraint?.firstAttribute == .centerX)
     XCTAssertTrue(constraint?.constant == 10)
+  }
+
+  func testSize() {
+    let superview = UIView()
+    let view = UIView()
+    superview.addSubview(view)
+
+    let constraints = Anchor(view: view).width.height.equal.to(10).constraints()
+    XCTAssertEqual(constraints.count, 2)
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .width && $0.constant == 10 }))
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .width && $0.secondAttribute == .notAnAttribute }))
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .width && $0.secondItem == nil }))
+
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .height && $0.constant == 10 }))
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .height && $0.secondAttribute == .notAnAttribute }))
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .height && $0.secondItem == nil }))
   }
 }
