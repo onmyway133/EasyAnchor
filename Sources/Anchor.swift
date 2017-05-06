@@ -23,9 +23,9 @@ public class Anchor {
   // value: constant
   var pins: [Pin] = []
   var multiplierValue: CGFloat = 1
-  var priorityValue: CGFloat?
+  var priorityValue: Float?
   var identifierValue: String?
-  var referenceBlock: ((NSLayoutConstraint) -> Void)?
+  var referenceBlock: (([NSLayoutConstraint]) -> Void)?
   var relationValue: NSLayoutRelation = .equal
   var toValue: To = .none
 
@@ -177,7 +177,7 @@ public extension Anchor {
     return self
   }
 
-  func priority(_ value: CGFloat) -> Self {
+  func priority(_ value: Float) -> Self {
     priorityValue = value
     return self
   }
@@ -187,7 +187,7 @@ public extension Anchor {
     return self
   }
 
-  func ref(_ block: @escaping (NSLayoutConstraint) -> Void) -> Self {
+  func ref(_ block: @escaping ([NSLayoutConstraint]) -> Void) -> Self {
     referenceBlock = block
     return self
   }
@@ -228,10 +228,29 @@ public extension Anchor {
   }
 }
 
-// MARK: - Constraint
+// MARK: - Constraints
+
+public extension Anchor {
+  func constraints() -> [NSLayoutConstraint] {
+    let constraints = output()
+    constraints.forEach {
+      if let identifierValue = identifierValue {
+        $0.identifier = identifierValue
+      }
+
+      if let priorityValue = priorityValue {
+        $0.priority = priorityValue
+      }
+    }
+
+    referenceBlock?(constraints)
+    return constraints
+  }
+}
+
+// MARK: - Output Helper
 
 extension Anchor {
-
   func output() -> [NSLayoutConstraint] {
     switch toValue {
     case .anchor(let anchor):
