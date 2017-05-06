@@ -29,6 +29,8 @@
 		D296837A1EBDBC50001E62CB /* Anchor+To.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29683781EBDBC50001E62CB /* Anchor+To.swift */; };
 		D296837C1EBDBC70001E62CB /* Anchor+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296837B1EBDBC70001E62CB /* Anchor+Constraints.swift */; };
 		D296837D1EBDBC70001E62CB /* Anchor+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296837B1EBDBC70001E62CB /* Anchor+Constraints.swift */; };
+		D296837F1EBDBC8D001E62CB /* Anchor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296837E1EBDBC8D001E62CB /* Anchor+Helper.swift */; };
+		D29683801EBDBC8D001E62CB /* Anchor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296837E1EBDBC8D001E62CB /* Anchor+Helper.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* Anchors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Anchors.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* Anchors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Anchors.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,7 @@
 		D29683751EBDBC36001E62CB /* Anchor+Relation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+Relation.swift"; sourceTree = "<group>"; };
 		D29683781EBDBC50001E62CB /* Anchor+To.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+To.swift"; sourceTree = "<group>"; };
 		D296837B1EBDBC70001E62CB /* Anchor+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+Constraints.swift"; sourceTree = "<group>"; };
+		D296837E1EBDBC8D001E62CB /* Anchor+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+Helper.swift"; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
 		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* Anchors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Anchors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +134,7 @@
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
+				D296837E1EBDBC8D001E62CB /* Anchor+Helper.swift */,
 				D296837B1EBDBC70001E62CB /* Anchor+Constraints.swift */,
 				D29683721EBDBC1A001E62CB /* Anchor+Configuration.swift */,
 				D500FD111C3AABED00782D78 /* Playground-iOS.playground */,
@@ -359,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D296837F1EBDBC8D001E62CB /* Anchor+Helper.swift in Sources */,
 				D29683691EBDBBA5001E62CB /* View+Extensions.swift in Sources */,
 				D296836A1EBDBBA7001E62CB /* Anchor.swift in Sources */,
 				D29683701EBDBBF8001E62CB /* Anchor+Convenience.swift in Sources */,
@@ -384,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D29683801EBDBC8D001E62CB /* Anchor+Helper.swift in Sources */,
 				D29683681EBDBBA5001E62CB /* View+Extensions.swift in Sources */,
 				D296836B1EBDBBA7001E62CB /* Anchor.swift in Sources */,
 				D29683711EBDBBF8001E62CB /* Anchor+Convenience.swift in Sources */,
