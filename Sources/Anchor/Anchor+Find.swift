@@ -1,22 +1,7 @@
 import UIKit
 
 public extension Anchor {
-  public class Find {
-    let view: UIView
-
-    init(view: UIView) {
-      self.view = view
-    }
-  }
-
-  var find: Find {
-    return Find(view: view)
-  }
-}
-
-public extension Anchor.Find {
-
-  func constraint(_ attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
+  func find(_ attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
     var constraints = view.superview?.constraints
 
     if attribute == .width || attribute == .height {

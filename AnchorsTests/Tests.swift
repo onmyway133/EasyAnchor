@@ -152,4 +152,33 @@ class Tests: XCTestCase {
 
     XCTAssertEqual(view.frame, superview.bounds)
   }
+
+  func testFind() {
+    let superview = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    let view = UIView()
+    superview.addSubview(view)
+
+    activate(
+      view.anchor.width.height.equal.to(10),
+      view.anchor.center
+    )
+
+    XCTAssertEqual(view.constraints.count, 2)
+    XCTAssertEqual(superview.constraints.count, 2)
+
+    superview.updateConstraintsIfNeeded()
+    superview.layoutIfNeeded()
+
+    wait(for: 0.1)
+
+    XCTAssertEqual(view.frame.size, CGSize(width: 10, height: 10))
+    XCTAssertEqual(view.center, CGPoint(x: 50, y: 50))
+
+    XCTAssertNotNil(view.anchor.find(.width))
+    XCTAssertNotNil(view.anchor.find(.height))
+    XCTAssertNil(view.anchor.find(.top))
+
+    XCTAssertNotNil(view.anchor.find(.centerX))
+    XCTAssertNotNil(view.anchor.find(.centerY))
+  }
 }
