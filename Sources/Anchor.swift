@@ -248,7 +248,7 @@ extension Anchor {
   }
 
   func outputForSize() -> [NSLayoutConstraint] {
-    let constraints: [NSLayoutConstraint] = pins
+    return pins
       .filter({
         return $0.attribute == .width || $0.attribute == .height
       })
@@ -262,12 +262,22 @@ extension Anchor {
                                             constant: $0.constant)
         return constraint
       })
-
-    return constraints
   }
 
   func output(anchor anotherAnchor: Anchor) -> [NSLayoutConstraint] {
-    return []
+    let anotherPins = anotherAnchor.pins.isEmpty ? pins : anotherAnchor.pins
+    let pairs = zip(pins, anotherPins)
+
+    return pairs.map({ pin, anotherPin in
+      let constraint = NSLayoutConstraint(item: view,
+                                          attribute: pin.attribute,
+                                          relatedBy: relationValue,
+                                          toItem: anotherAnchor.view,
+                                          attribute: anotherPin.attribute,
+                                          multiplier: multiplierValue,
+                                          constant: pin.constant)
+      return constraint
+    })
   }
 }
 
