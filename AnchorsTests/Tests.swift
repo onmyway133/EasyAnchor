@@ -111,4 +111,19 @@ class Tests: XCTestCase {
     XCTAssertTrue(constraints.contains(where: {
       $0.firstAttribute == .top && $0.secondItem as! NSObject == view2 }))
   }
+
+  func testRatio() {
+    let view = UIView()
+    let constraints = view.anchor.width.equal.to(10).constraints()
+      + view.anchor.height.equal.to(view.anchor.width).multiplier(1.5).constraints()
+
+    XCTAssertEqual(constraints.count, 2)
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .width && $0.constant == 10 }))
+
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .height && $0.constant == 0 }))
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .height && $0.multiplier == 1.5 }))
+  }
 }
