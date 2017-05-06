@@ -4,14 +4,14 @@ import XCTest
 class Tests: XCTestCase {
 
   func testPins() {
-    let anchor = Anchor(view: UIView()).center
+    let anchor = UIView().anchor.center
     XCTAssertEqual(anchor.pins.count, 2)
     XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .centerX }))
     XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .centerY }))
   }
 
   func testInsets() {
-    let anchor = Anchor(view: UIView()).edges.insets(UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4))
+    let anchor = UIView().anchor.edges.insets(UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4))
     XCTAssertEqual(anchor.pins.count, 4)
     XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .top && $0.constant == 1 }))
     XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .left && $0.constant == 2 }))
@@ -20,7 +20,7 @@ class Tests: XCTestCase {
   }
 
   func testConfig() {
-    let anchor = Anchor(view: UIView()).center.constant(10).multiplier(1.5).priority(999).id("pinToTop")
+    let anchor = UIView().anchor.center.constant(10).multiplier(1.5).priority(999).id("pinToTop")
     XCTAssertEqual(anchor.pins.count, 2)
     XCTAssertEqual(anchor.multiplierValue, 1.5)
     XCTAssertEqual(anchor.priorityValue, 999)
@@ -30,12 +30,12 @@ class Tests: XCTestCase {
   }
 
   func testRelation() {
-    let anchor = Anchor(view: UIView()).greaterThanOrEqual
+    let anchor = UIView().anchor.greaterThanOrEqual
     XCTAssertEqual(anchor.relationValue, .greaterThanOrEqual)
   }
 
   func testSuperview() {
-    let constraints = Anchor(view: UIView()).center.constraints()
+    let constraints = UIView().anchor.center.constraints()
     XCTAssertEqual(constraints.isEmpty, true)
   }
 
@@ -73,5 +73,26 @@ class Tests: XCTestCase {
       $0.firstAttribute == .height && $0.secondAttribute == .notAnAttribute }))
     XCTAssertTrue(constraints.contains(where: {
       $0.firstAttribute == .height && $0.secondItem == nil }))
+  }
+
+  func testAnotherAnchor() {
+    let superview = UIView()
+    let view1 = UIView()
+    let view2 = UIView()
+    superview.addSubview(view1)
+    superview.addSubview(view2)
+
+    let constraints = view1.anchor.top.left.right.equal.to(view2.anchor.left.right).constraints()
+    XCTAssertEqual(constraints.count, 2)
+
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .left && $0.firstItem as! NSObject == view1 }))
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .left && $0.secondItem as! NSObject == view2 }))
+
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .right && $0.firstItem as! NSObject == view1 }))
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .right && $0.secondItem as! NSObject == view2 }))
   }
 }
