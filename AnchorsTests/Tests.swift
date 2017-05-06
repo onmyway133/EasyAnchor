@@ -29,6 +29,11 @@ class Tests: XCTestCase {
     XCTAssertEqual(anchor.pins.contains(where: { $0.attribute == .centerY && $0.constant == 10 }), true)
   }
 
+  func testRelation() {
+    let anchor = Anchor(view: UIView()).greaterThanOrEqual
+    XCTAssertEqual(anchor.relationValue, .greaterThanOrEqual)
+  }
+
   func testSuperview() {
     let constraints = Anchor(view: UIView()).center.constraints()
     XCTAssertEqual(constraints.isEmpty, true)
