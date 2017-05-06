@@ -156,7 +156,7 @@ public extension Anchor {
 
 public extension Anchor {
 
-  func edges(insets: UIEdgeInsets) -> Self {
+  func insets(_ insets: UIEdgeInsets) -> Self {
     updateIfAny(.top, insets.top)
     updateIfAny(.bottom, insets.bottom)
     updateIfAny(.left, insets.left)
