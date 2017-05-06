@@ -9,4 +9,8 @@ public extension Anchor {
   var center: Anchor {
     return centerX.centerY
   }
+
+  var size: Anchor {
+    return width.height
+  }
 }
