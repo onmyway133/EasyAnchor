@@ -126,4 +126,21 @@ class Tests: XCTestCase {
     XCTAssertTrue(constraints.contains(where: {
       $0.firstAttribute == .height && $0.multiplier == 1.5 }))
   }
+
+  func testActivate() {
+    let superview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+    let view = UIView()
+    superview.addSubview(view)
+
+    activate(view.anchor.edges.equal.to(superview.anchor))
+
+    XCTAssertEqual(superview.constraints.count, 4)
+
+    superview.updateConstraintsIfNeeded()
+    superview.layoutIfNeeded()
+
+    wait(for: 0.1)
+
+    XCTAssertEqual(view.frame, superview.bounds)
+  }
 }
