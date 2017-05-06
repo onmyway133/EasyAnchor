@@ -95,4 +95,20 @@ class Tests: XCTestCase {
     XCTAssertTrue(constraints.contains(where: {
       $0.firstAttribute == .right && $0.secondItem as! NSObject == view2 }))
   }
+
+  func testAnotherAnchorWithMismatchPinCount() {
+    let superview = UIView()
+    let view1 = UIView()
+    let view2 = UIView()
+    superview.addSubview(view1)
+    superview.addSubview(view2)
+
+    let constraints = view1.anchor.top.bottom.equal.to(view2.anchor.top).constraints()
+    XCTAssertEqual(constraints.count, 1)
+
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .top && $0.firstItem as! NSObject == view1 }))
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .top && $0.secondItem as! NSObject == view2 }))
+  }
 }
