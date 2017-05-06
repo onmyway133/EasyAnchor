@@ -1,6 +1,12 @@
 import UIKit
 
 public class Anchor {
+  enum To {
+    case anchor(Anchor)
+    case size(CGFloat)
+    case none
+  }
+
   private let view: UIView
 
   // key: attribute
@@ -11,8 +17,8 @@ public class Anchor {
   fileprivate var priorityValue: CGFloat?
   fileprivate var identifierValue: String?
   fileprivate var referenceBlock: ((NSLayoutConstraint) -> Void)?
-  fileprivate var relation: NSLayoutRelation = .equal
-  fileprivate var anotherAnchor: Anchor?
+  fileprivate var relationValue: NSLayoutRelation = .equal
+  fileprivate var toValue: To = .none
 
   init(view: UIView) {
     view.translatesAutoresizingMaskIntoConstraints = false
@@ -178,22 +184,33 @@ public extension Anchor {
 // MARK: - Relation
 
 public extension Anchor {
-
-  func equal(_ anchor: Anchor) -> Self {
-    relation = .equal
-    anotherAnchor = anchor
+  var equal: Anchor {
+    relationValue = .equal
     return self
   }
 
-  func lessThanOrEqual(_ anchor: Anchor) -> Self {
-    relation = .lessThanOrEqual
-    anotherAnchor = anchor
+  var lessThanOrEqual: Anchor {
+    relationValue = .lessThanOrEqual
     return self
   }
 
-  func greaterThanOrEqual(_ anchor: Anchor) -> Self {
-    relation = .greaterThanOrEqual
-    anotherAnchor = anchor
+  var greaterThanOrEqual: Anchor {
+    relationValue = .greaterThanOrEqual
+    return self
+  }
+}
+
+// MARK: - To
+
+public extension Anchor {
+
+  func to(_ anchor: Anchor) -> Self {
+    toValue = .anchor(anchor)
+    return self
+  }
+
+  func to(_ size: CGFloat) -> Self {
+    toValue = .size(size)
     return self
   }
 }
@@ -203,6 +220,13 @@ public extension Anchor {
 extension Anchor {
 
   func output() -> [NSLayoutConstraint] {
-    return []
+    switch toValue {
+    case .anchor(let anchor):
+      return []
+    case .size(let size):
+      return []
+    case .none:
+      return []
+    }
   }
 }
