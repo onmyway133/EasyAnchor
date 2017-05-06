@@ -17,17 +17,17 @@ public class Anchor {
     }
   }
 
-  fileprivate let view: UIView
+  let view: UIView
 
   // key: attribute
   // value: constant
-  fileprivate var pins: [Pin] = []
-  fileprivate var multiplierValue: CGFloat = 1
-  fileprivate var priorityValue: CGFloat?
-  fileprivate var identifierValue: String?
-  fileprivate var referenceBlock: ((NSLayoutConstraint) -> Void)?
-  fileprivate var relationValue: NSLayoutRelation = .equal
-  fileprivate var toValue: To = .none
+  var pins: [Pin] = []
+  var multiplierValue: CGFloat = 1
+  var priorityValue: CGFloat?
+  var identifierValue: String?
+  var referenceBlock: ((NSLayoutConstraint) -> Void)?
+  var relationValue: NSLayoutRelation = .equal
+  var toValue: To = .none
 
   init(view: UIView) {
     view.translatesAutoresizingMaskIntoConstraints = false
