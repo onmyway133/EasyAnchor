@@ -39,7 +39,7 @@ class Tests: XCTestCase {
     XCTAssertEqual(constraints.isEmpty, true)
   }
 
-  func testConstraints() {
+  func testRef() {
     var constraint: NSLayoutConstraint?
 
     let superview = UIView()
