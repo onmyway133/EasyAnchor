@@ -3,17 +3,26 @@ import UIKit
 public class Anchor {
   enum To {
     case anchor(Anchor)
-    case size(CGFloat)
+    case size
     case none
   }
 
-  private let view: UIView
+  class Pin {
+    let attribute: NSLayoutAttribute
+    var constant: CGFloat
+
+    init(_ attribute: NSLayoutAttribute, constant: CGFloat = 0) {
+      self.attribute = attribute
+      self.constant = constant
+    }
+  }
+
+  fileprivate let view: UIView
 
   // key: attribute
   // value: constant
-  fileprivate var attributes: [NSLayoutAttribute: CGFloat] = [:]
-  fileprivate var constantValue: CGFloat?
-  fileprivate var multiplierValue: CGFloat?
+  fileprivate var pins: [Pin] = []
+  fileprivate var multiplierValue: CGFloat = 1
   fileprivate var priorityValue: CGFloat?
   fileprivate var identifierValue: String?
   fileprivate var referenceBlock: ((NSLayoutConstraint) -> Void)?
@@ -30,102 +39,102 @@ public class Anchor {
 
 public extension Anchor {
   var left: Anchor {
-    attributes[.left] = 0
+    pins.append(Pin(.left))
     return self
   }
 
   var right: Anchor {
-    attributes[.right] = 0
+    pins.append(Pin(.right))
     return self
   }
 
   var top: Anchor {
-    attributes[.top] = 0
+    pins.append(Pin(.top))
     return self
   }
 
   var bottom: Anchor {
-    attributes[.bottom] = 0
+    pins.append(Pin(.bottom))
     return self
   }
 
   var leading: Anchor {
-    attributes[.leading] = 0
+    pins.append(Pin(.leading))
     return self
   }
 
   var trailing: Anchor {
-    attributes[.trailing] = 0
+    pins.append(Pin(.trailing))
     return self
   }
 
   var width: Anchor {
-    attributes[.width] = 0
+    pins.append(Pin(.width))
     return self
   }
 
   var height: Anchor {
-    attributes[.height] = 0
+    pins.append(Pin(.height))
     return self
   }
 
   var centerX: Anchor {
-    attributes[.centerX] = 0
+    pins.append(Pin(.centerX))
     return self
   }
 
   var centerY: Anchor {
-    attributes[.centerY] = 0
+    pins.append(Pin(.centerY))
     return self
   }
 
   var lastBaseline: Anchor {
-    attributes[.lastBaseline] = 0
+    pins.append(Pin(.lastBaseline))
     return self
   }
 
   var firstBaseline: Anchor {
-    attributes[.firstBaseline] = 0
+    pins.append(Pin(.firstBaseline))
     return self
   }
 
   var leftMargin: Anchor {
-    attributes[.leftMargin] = 0
+    pins.append(Pin(.leftMargin))
     return self
   }
 
   var rightMargin: Anchor {
-    attributes[.rightMargin] = 0
+    pins.append(Pin(.rightMargin))
     return self
   }
 
   var topMargin: Anchor {
-    attributes[.topMargin] = 0
+    pins.append(Pin(.topMargin))
     return self
   }
 
   var bottomMargin: Anchor {
-    attributes[.bottomMargin] = 0
+    pins.append(Pin(.bottomMargin))
     return self
   }
 
   var leadingMargin: Anchor {
-    attributes[.leadingMargin] = 0
+    pins.append(Pin(.leadingMargin))
     return self
   }
 
   var trailingMargin: Anchor {
-    attributes[.trailingMargin] = 0
+    pins.append(Pin(.trailingMargin))
     return self
   }
 
   var centerXWithinMargins: Anchor {
-    attributes[.centerXWithinMargins] = 0
+    pins.append(Pin(.centerXWithinMargins))
     return self
   }
 
   var centerYWithinMargins: Anchor {
-    attributes[.centerYWithinMargins] = 0
+    pins.append(Pin(.centerYWithinMargins))
     return self
   }
 }
@@ -134,7 +143,7 @@ public extension Anchor {
 
 public extension Anchor {
   var edges: Anchor {
-    attributes.removeAll()
+    pins.removeAll()
     return top.right.bottom.left
   }
 
@@ -148,15 +157,18 @@ public extension Anchor {
 public extension Anchor {
 
   func edges(insets: UIEdgeInsets) -> Self {
-    attributes[.top] = insets.top
-    attributes[.left] = insets.left
-    attributes[.right] = insets.right
-    attributes[.bottom] = insets.bottom
+    updateIfAny(.top, insets.top)
+    updateIfAny(.bottom, insets.bottom)
+    updateIfAny(.left, insets.left)
+    updateIfAny(.right, insets.right)
     return self
   }
 
   func constant(_ value: CGFloat) -> Self {
-    constantValue = value
+    pins.forEach {
+      $0.constant = value
+    }
+
     return self
   }
 
@@ -210,7 +222,8 @@ public extension Anchor {
   }
 
   func to(_ size: CGFloat) -> Self {
-    toValue = .size(size)
+    updateIfAny(.width, size)
+    updateIfAny(.height, size)
     return self
   }
 }
@@ -222,11 +235,47 @@ extension Anchor {
   func output() -> [NSLayoutConstraint] {
     switch toValue {
     case .anchor(let anchor):
-      return []
-    case .size(let size):
-      return []
+      return output(anchor: anchor)
+    case .size:
+      return outputForSize()
     case .none:
-      return []
+      if let superview = view.superview {
+        return output(anchor: Anchor(view: superview))
+      } else {
+        return []
+      }
     }
+  }
+
+  func outputForSize() -> [NSLayoutConstraint] {
+    let constraints: [NSLayoutConstraint] = pins
+      .filter({
+        return $0.attribute == .width || $0.attribute == .height
+      })
+      .map({
+        let constraint = NSLayoutConstraint(item: view,
+                                            attribute: $0.attribute,
+                                            relatedBy: relationValue,
+                                            toItem: nil,
+                                            attribute: .notAnAttribute,
+                                            multiplier: multiplierValue,
+                                            constant: $0.constant)
+        return constraint
+      })
+
+    return constraints
+  }
+
+  func output(anchor anotherAnchor: Anchor) -> [NSLayoutConstraint] {
+    return []
+  }
+}
+
+// MARK: - Update
+
+extension Anchor {
+  func updateIfAny(_ attribute: NSLayoutAttribute, _ constant: CGFloat) {
+    let pin = pins.filter({ $0.attribute == attribute }).first
+    pin?.constant = constant
   }
 }
