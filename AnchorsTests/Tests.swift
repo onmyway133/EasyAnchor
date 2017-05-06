@@ -176,6 +176,8 @@ class Tests: XCTestCase {
 
     XCTAssertNotNil(view.anchor.find(.width))
     XCTAssertNotNil(view.anchor.find(.height))
+    XCTAssertNotNil(view.anchor.find(.centerX))
+    XCTAssertNotNil(view.anchor.find(.centerY))
     XCTAssertNil(view.anchor.find(.top))
 
     XCTAssertNotNil(view.anchor.find(.centerX))
