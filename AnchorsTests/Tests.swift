@@ -75,14 +75,14 @@ class Tests: XCTestCase {
       $0.firstAttribute == .height && $0.secondItem == nil }))
   }
 
-  func testAnotherAnchor() {
+  func testAnotherAnchorWithoutPins() {
     let superview = UIView()
     let view1 = UIView()
     let view2 = UIView()
     superview.addSubview(view1)
     superview.addSubview(view2)
 
-    let constraints = view1.anchor.top.left.right.equal.to(view2.anchor.left.right).constraints()
+    let constraints = view1.anchor.left.right.equal.to(view2.anchor).constraints()
     XCTAssertEqual(constraints.count, 2)
 
     XCTAssertTrue(constraints.contains(where: {
