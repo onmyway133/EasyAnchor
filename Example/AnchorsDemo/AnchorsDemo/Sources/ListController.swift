@@ -8,6 +8,7 @@ class ListController: UITableViewController {
   }
 
   let contents: [Content] = [
+    Content(title: "Basic", view: BasicView()),
     Content(title: "Align", view: AlignView())
   ]
 
