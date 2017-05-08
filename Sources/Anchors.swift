@@ -2,10 +2,17 @@ import UIKit
 
 // MARK: - Public
 
-public func activate(_ anchors: Anchor ...) {
-  anchors.forEach({
-    $0.constraints().forEach({
-      $0.isActive = true
-    })
-  })
+/// Produce constraints into group
+public func group(_ anchors: Anchor ...) -> Group {
+  return Group(anchors: anchors)
+}
+
+/// Produce constraints into group and activate
+
+@discardableResult
+public func activate(_ anchors: Anchor ...) -> Group {
+  let group = Group(anchors: anchors)
+  group.isActive = true
+
+  return group
 }

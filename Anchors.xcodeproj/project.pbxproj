@@ -35,6 +35,8 @@
 		D296838C1EBDC439001E62CB /* Anchor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29683861EBDC439001E62CB /* Anchor+Helper.swift */; };
 		D296838E1EBDD4EE001E62CB /* LayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296838D1EBDD4EE001E62CB /* LayoutGuide+Extensions.swift */; };
 		D296838F1EBDD4EE001E62CB /* LayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296838D1EBDD4EE001E62CB /* LayoutGuide+Extensions.swift */; };
+		D2F712EE1EC0FFA300CE2CE0 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F712ED1EC0FFA300CE2CE0 /* Group.swift */; };
+		D2F712EF1EC0FFA300CE2CE0 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F712ED1EC0FFA300CE2CE0 /* Group.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* Anchors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Anchors.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* Anchors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Anchors.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,7 @@
 		D29683851EBDC439001E62CB /* Anchor+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+Constraints.swift"; sourceTree = "<group>"; };
 		D29683861EBDC439001E62CB /* Anchor+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+Helper.swift"; sourceTree = "<group>"; };
 		D296838D1EBDD4EE001E62CB /* LayoutGuide+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
+		D2F712ED1EC0FFA300CE2CE0 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
 		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* Anchors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Anchors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +145,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D2F712EB1EC0FF9700CE2CE0 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		D2F712EC1EC0FF9700CE2CE0 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				D2F712ED1EC0FFA300CE2CE0 /* Group.swift */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +195,8 @@
 		D5C629691C3A809D007F7B7C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D2F712EB1EC0FF9700CE2CE0 /* Builder */,
+				D2F712EC1EC0FF9700CE2CE0 /* Group */,
 				D29683601EBDBB9D001E62CB /* Anchor */,
 				D29683621EBDBB9D001E62CB /* Extensions */,
 				D29683511EBD19D2001E62CB /* Anchors.swift */,
@@ -377,6 +397,7 @@
 				D296838B1EBDC439001E62CB /* Anchor+Helper.swift in Sources */,
 				D29683701EBDBBF8001E62CB /* Anchor+Convenience.swift in Sources */,
 				D29683791EBDBC50001E62CB /* Anchor+To.swift in Sources */,
+				D2F712EE1EC0FFA300CE2CE0 /* Group.swift in Sources */,
 				D29683521EBD19D2001E62CB /* Anchors.swift in Sources */,
 				D29683891EBDC439001E62CB /* Anchor+Constraints.swift in Sources */,
 				D29683871EBDC439001E62CB /* Anchor+Configuration.swift in Sources */,
@@ -405,6 +426,7 @@
 				D296838C1EBDC439001E62CB /* Anchor+Helper.swift in Sources */,
 				D29683711EBDBBF8001E62CB /* Anchor+Convenience.swift in Sources */,
 				D296837A1EBDBC50001E62CB /* Anchor+To.swift in Sources */,
+				D2F712EF1EC0FFA300CE2CE0 /* Group.swift in Sources */,
 				D29683531EBD19D2001E62CB /* Anchors.swift in Sources */,
 				D296838A1EBDC439001E62CB /* Anchor+Constraints.swift in Sources */,
 				D29683881EBDC439001E62CB /* Anchor+Configuration.swift in Sources */,
