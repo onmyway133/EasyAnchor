@@ -41,8 +41,8 @@
 		D2F712F21EC109E100CE2CE0 /* ConstraintProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F712F01EC109E100CE2CE0 /* ConstraintProducer.swift */; };
 		D2F712F41EC10B6300CE2CE0 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F712F31EC10B6300CE2CE0 /* Builder.swift */; };
 		D2F712F51EC10B6300CE2CE0 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F712F31EC10B6300CE2CE0 /* Builder.swift */; };
-		D2F712F71EC10B8700CE2CE0 /* Builder+Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F712F61EC10B8700CE2CE0 /* Builder+Align.swift */; };
-		D2F712F81EC10B8700CE2CE0 /* Builder+Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F712F61EC10B8700CE2CE0 /* Builder+Align.swift */; };
+		D2F712F71EC10B8700CE2CE0 /* Builder+Apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F712F61EC10B8700CE2CE0 /* Builder+Apply.swift */; };
+		D2F712F81EC10B8700CE2CE0 /* Builder+Apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F712F61EC10B8700CE2CE0 /* Builder+Apply.swift */; };
 		D2F712FA1EC10BAB00CE2CE0 /* Builder+Distribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F712F91EC10BAB00CE2CE0 /* Builder+Distribute.swift */; };
 		D2F712FB1EC10BAB00CE2CE0 /* Builder+Distribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F712F91EC10BAB00CE2CE0 /* Builder+Distribute.swift */; };
 		D2F712FD1EC10BB300CE2CE0 /* Builder+Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F712FC1EC10BB300CE2CE0 /* Builder+Paging.swift */; };
@@ -86,7 +86,7 @@
 		D2F712ED1EC0FFA300CE2CE0 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		D2F712F01EC109E100CE2CE0 /* ConstraintProducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintProducer.swift; sourceTree = "<group>"; };
 		D2F712F31EC10B6300CE2CE0 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
-		D2F712F61EC10B8700CE2CE0 /* Builder+Align.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Builder+Align.swift"; sourceTree = "<group>"; };
+		D2F712F61EC10B8700CE2CE0 /* Builder+Apply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Builder+Apply.swift"; sourceTree = "<group>"; };
 		D2F712F91EC10BAB00CE2CE0 /* Builder+Distribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Builder+Distribute.swift"; sourceTree = "<group>"; };
 		D2F712FC1EC10BB300CE2CE0 /* Builder+Paging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Builder+Paging.swift"; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				D2F712F31EC10B6300CE2CE0 /* Builder.swift */,
-				D2F712F61EC10B8700CE2CE0 /* Builder+Align.swift */,
+				D2F712F61EC10B8700CE2CE0 /* Builder+Apply.swift */,
 				D2F712F91EC10BAB00CE2CE0 /* Builder+Distribute.swift */,
 				D2F712FC1EC10BB300CE2CE0 /* Builder+Paging.swift */,
 			);
@@ -423,7 +423,7 @@
 				D29683521EBD19D2001E62CB /* Anchors.swift in Sources */,
 				D29683891EBDC439001E62CB /* Anchor+Constraints.swift in Sources */,
 				D29683871EBDC439001E62CB /* Anchor+Configuration.swift in Sources */,
-				D2F712F71EC10B8700CE2CE0 /* Builder+Align.swift in Sources */,
+				D2F712F71EC10B8700CE2CE0 /* Builder+Apply.swift in Sources */,
 				D296836D1EBDBBC5001E62CB /* Anchor+Attributes.swift in Sources */,
 				D29683761EBDBC36001E62CB /* Anchor+Relation.swift in Sources */,
 				D2F712FA1EC10BAB00CE2CE0 /* Builder+Distribute.swift in Sources */,
@@ -457,7 +457,7 @@
 				D29683531EBD19D2001E62CB /* Anchors.swift in Sources */,
 				D296838A1EBDC439001E62CB /* Anchor+Constraints.swift in Sources */,
 				D29683881EBDC439001E62CB /* Anchor+Configuration.swift in Sources */,
-				D2F712F81EC10B8700CE2CE0 /* Builder+Align.swift in Sources */,
+				D2F712F81EC10B8700CE2CE0 /* Builder+Apply.swift in Sources */,
 				D296836E1EBDBBC5001E62CB /* Anchor+Attributes.swift in Sources */,
 				D29683771EBDBC36001E62CB /* Anchor+Relation.swift in Sources */,
 				D2F712FB1EC10BAB00CE2CE0 /* Builder+Distribute.swift in Sources */,
