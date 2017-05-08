@@ -16,7 +16,7 @@ public class Group {
     self.constraints = constraints
   }
 
-  convenience init(anchors: [Anchor]) {
+  convenience init(anchors: [ConstraintProducer]) {
     var constraints: [NSLayoutConstraint] = []
     anchors.forEach {
       constraints.append(contentsOf: $0.constraints())
