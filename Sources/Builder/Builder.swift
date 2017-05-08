@@ -12,4 +12,9 @@ public class Builder {
   public func align(_ anchor: Anchor, to views: [UIView]) -> Builder.Apply {
     return Apply(anchor: anchor, views: views)
   }
+
+  /// Distribute views horizontally
+  public func distribute(horizontally views: [UIView], spacing: CGFloat) -> Builder.Distribute {
+    return Distribute(views: views, spacing: spacing)
+  }
 }
