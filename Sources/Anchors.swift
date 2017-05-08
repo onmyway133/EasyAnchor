@@ -1,15 +1,15 @@
 import UIKit
 
 /// Produce constraints into group
-public func group(_ anchors: ConstraintProducer ...) -> Group {
-  return Group(anchors: anchors)
+public func group(_ producers: ConstraintProducer ...) -> Group {
+  return Group(producers: producers)
 }
 
 /// Produce constraints into group and activate
 
 @discardableResult
-public func activate(_ anchors: ConstraintProducer ...) -> Group {
-  let group = Group(anchors: anchors)
+public func activate(_ producers: ConstraintProducer ...) -> Group {
+  let group = Group(producers: producers)
   group.isActive = true
 
   return group

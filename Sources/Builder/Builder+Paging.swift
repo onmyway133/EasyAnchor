@@ -27,7 +27,7 @@ public extension Builder {
 
       })
 
-      return Group(anchors: anchors).constraints
+      return Group(producers: anchors).constraints
     }
   }
 }

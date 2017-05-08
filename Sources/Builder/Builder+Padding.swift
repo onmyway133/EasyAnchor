@@ -19,7 +19,7 @@ public extension Builder {
         view.anchor.right.equal.to(container.anchor).constant(-spacing)
       ]
 
-      return Group(anchors: anchors).constraints
+      return Group(producers: anchors).constraints
     }
   }
 }

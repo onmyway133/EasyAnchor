@@ -20,7 +20,7 @@ public extension Builder {
         anchors.append(anchor.equal.to(sourceAnchor))
       })
 
-      return Group(anchors: anchors).constraints
+      return Group(producers: anchors).constraints
     }
   }
 }
