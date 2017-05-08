@@ -4,12 +4,12 @@ import Anchors
 class ListController: UITableViewController {
   struct Content {
     let title: String
-    let view: UIView
+    let view: UIView.Type
   }
 
   let contents: [Content] = [
-    Content(title: "Basic", view: BasicView()),
-    Content(title: "Align", view: AlignView())
+    Content(title: "Basic", view: BasicView.self),
+    Content(title: "Align", view: AlignView.self)
   ]
 
   override func viewDidLoad() {

@@ -3,13 +3,16 @@ import Anchors
 
 class ContentController: UIViewController {
   var content: ListController.Content!
+  var contentView: UIView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     view.backgroundColor = .white
     title = content.title
-    view.addSubview(content.view)
-    activate(content.view.anchor.edges.equal.to(view.anchor))
+
+    contentView = content.view.init()
+    view.addSubview(contentView)
+    activate(contentView.anchor.top.left.right.bottom.equal.to(view.anchor))
   }
 }
