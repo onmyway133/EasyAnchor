@@ -1,4 +1,5 @@
 import UIKit
+import Hue
 
 struct Color {
   static let background = UIColor.lightGray
