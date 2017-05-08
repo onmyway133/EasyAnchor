@@ -15,6 +15,7 @@ class ListController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = UIColor.white
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
   }
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -22,7 +23,7 @@ class ListController: UITableViewController {
   }
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = super.tableView(tableView, cellForRowAt: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
     let content = contents[indexPath.row]
     cell.textLabel?.text = content.title
 

@@ -1,5 +1,6 @@
 import UIKit
 
+/// A simple data structure to group a set of constraints
 public class Group {
   public let constraints: [NSLayoutConstraint]
   public var isActive: Bool = false {

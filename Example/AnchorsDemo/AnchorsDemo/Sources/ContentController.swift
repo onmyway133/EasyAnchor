@@ -7,6 +7,7 @@ class ContentController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    view.backgroundColor = .white
     title = content.title
     view.addSubview(content.view)
     activate(content.view.anchor.edges.equal.to(view.anchor))
