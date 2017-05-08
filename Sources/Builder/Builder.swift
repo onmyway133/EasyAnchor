@@ -17,4 +17,9 @@ public class Builder {
   public static func distribute(horizontally views: [UIView], spacing: CGFloat) -> Builder.Distribute {
     return Distribute(views: views, spacing: spacing)
   }
+
+  /// Padding view horizontally in container
+  public static func padding(view: UIView, container: UIView, spacing: CGFloat) -> Builder.Padding {
+    return Padding(view: view, container: container, spacing: spacing)
+  }
 }
