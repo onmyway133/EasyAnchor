@@ -1,6 +1,6 @@
 import UIKit
 
-extension UIView {
+public extension UIView {
   var anchor: Anchor {
     return Anchor(view: self)
   }
