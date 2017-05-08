@@ -1,6 +1,6 @@
 import UIKit
 
-public class Anchor {
+public class Anchor: ConstraintProducer {
   enum To {
     case anchor(Anchor)
     case size
