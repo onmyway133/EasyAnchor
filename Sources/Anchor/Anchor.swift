@@ -30,7 +30,6 @@ public class Anchor: ConstraintProducer {
   var toValue: To = .none
 
   init(view: UIView) {
-    view.translatesAutoresizingMaskIntoConstraints = false
     self.item = view
   }
 

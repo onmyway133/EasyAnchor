@@ -11,6 +11,8 @@ public extension Anchor {
       if let priorityValue = priorityValue {
         $0.priority = priorityValue
       }
+
+      ($0.firstItem as? UIView)?.translatesAutoresizingMaskIntoConstraints = false
     }
 
     referenceBlock?(constraints)
