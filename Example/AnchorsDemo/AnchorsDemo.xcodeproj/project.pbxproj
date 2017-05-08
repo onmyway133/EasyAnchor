@@ -12,6 +12,7 @@
 		D2F713061EC1170100CE2CE0 /* ContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F713051EC1170100CE2CE0 /* ContentController.swift */; };
 		D2F713081EC117A700CE2CE0 /* AlignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F713071EC117A700CE2CE0 /* AlignView.swift */; };
 		D2F7130A1EC1198300CE2CE0 /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F713091EC1198300CE2CE0 /* BasicView.swift */; };
+		D2F7130E1EC1252800CE2CE0 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F7130D1EC1252800CE2CE0 /* Animator.swift */; };
 		D5C7F74E1C3BC9CE008CDDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F74C1C3BC9CE008CDDBA /* LaunchScreen.storyboard */; };
 		D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */; };
 		D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 		D2F713051EC1170100CE2CE0 /* ContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentController.swift; sourceTree = "<group>"; };
 		D2F713071EC117A700CE2CE0 /* AlignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignView.swift; sourceTree = "<group>"; };
 		D2F713091EC1198300CE2CE0 /* BasicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
+		D2F7130D1EC1252800CE2CE0 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		D5C7F7401C3BC9CE008CDDBA /* AnchorsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnchorsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C7F74D1C3BC9CE008CDDBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5C7F74F1C3BC9CE008CDDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				D5C7F75A1C3BCA1E008CDDBA /* ListController.swift */,
 				D2F713021EC115C800CE2CE0 /* View.swift */,
 				D2F713051EC1170100CE2CE0 /* ContentController.swift */,
+				D2F7130D1EC1252800CE2CE0 /* Animator.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */,
 				D2F7130A1EC1198300CE2CE0 /* BasicView.swift in Sources */,
 				D2F713081EC117A700CE2CE0 /* AlignView.swift in Sources */,
+				D2F7130E1EC1252800CE2CE0 /* Animator.swift in Sources */,
 				D2F713031EC115C800CE2CE0 /* View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AnchorsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fantageek.AnchorsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -374,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AnchorsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fantageek.AnchorsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -15,8 +15,7 @@ class ContentController: UIViewController {
     view.addSubview(container)
     container.backgroundColor = .lightGray
     activate(
-      container.anchor.center,
-      container.anchor.width,
+      container.anchor.center.width,
       container.anchor.height.equal.to(container.anchor.width)
     )
 
