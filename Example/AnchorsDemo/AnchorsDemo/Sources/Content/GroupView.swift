@@ -1,7 +1,7 @@
 import UIKit
 import Anchors
 
-class ShrinkView: UIView {
+class GroupView: UIView {
   let container = View(text: "", color: Color.container)
   var animator: Animator!
   var g1: Group!
@@ -20,10 +20,12 @@ class ShrinkView: UIView {
       container.anchor.bottom.right
     )
     g3 = group(
-      container.anchor.right.constant(-80),
-      container.anchor.bottom.constant(-80),
+      container.anchor.right.constant(-250),
+      container.anchor.bottom.constant(-250),
       container.anchor.top.left
     )
+
+    g1.isActive = true
 
     animator = Animator(view: self, animations: [
       {
