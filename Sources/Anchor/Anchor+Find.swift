@@ -9,7 +9,7 @@ public extension Anchor {
     var constraints = view.superview?.constraints
 
     if attribute == .width || attribute == .height {
-      constraints = view.constraints
+      constraints?.append(contentsOf: view.constraints)
     }
 
     return constraints?.filter({
@@ -17,7 +17,7 @@ public extension Anchor {
         return false
       }
 
-      guard $0.firstItem as? NSObject == view || $0.secondItem as? NSObject == view else {
+      guard $0.firstItem as? NSObject == view else {
         return false
       }
 
