@@ -9,7 +9,7 @@ public class Builder {
   }
 
   /// Apply the same anchor to other views
-  public static func align(_ anchor: Anchor, to views: [UIView]) -> Builder.Apply {
+  public static func apply(_ anchor: Anchor, to views: [UIView]) -> Builder.Apply {
     return Apply(anchor: anchor, views: views)
   }
 
