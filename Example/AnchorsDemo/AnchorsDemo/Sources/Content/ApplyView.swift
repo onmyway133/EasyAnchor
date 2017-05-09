@@ -19,7 +19,7 @@ class ApplyView: UIView {
 
     activate(
       container.anchor.edges.insets(8),
-      a.anchor.left.top.right,
+      a.anchor.top.width.right,
       a.anchor.height.equal.to(60),
       Builder.apply(a.anchor.left.height, to: [b, c]),
       b.anchor.centerY,
@@ -30,10 +30,10 @@ class ApplyView: UIView {
 
     animator = Animator(view: self, animations: [
       {
-        self.a.anchor.find(.left)?.constant = 100
+        self.a.anchor.find(.width)?.constant -= 100
       },
       {
-        self.a.anchor.find(.left)?.constant = 0
+        self.a.anchor.find(.width)?.constant += 100
       }
     ])
 
