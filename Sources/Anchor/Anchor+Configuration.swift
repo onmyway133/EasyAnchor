@@ -2,14 +2,6 @@ import UIKit
 
 public extension Anchor {
 
-  func insets(_ insets: UIEdgeInsets) -> Self {
-    updateIfAny(.top, insets.top)
-    updateIfAny(.bottom, insets.bottom)
-    updateIfAny(.left, insets.left)
-    updateIfAny(.right, insets.right)
-    return self
-  }
-
   func constant(_ value: CGFloat) -> Self {
     pins.forEach {
       $0.constant = value
