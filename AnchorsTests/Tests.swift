@@ -183,4 +183,31 @@ class Tests: XCTestCase {
     XCTAssertNotNil(view.anchor.find(.centerX))
     XCTAssertNotNil(view.anchor.find(.centerY))
   }
+
+  func testFindWidthHeight() {
+    let superview = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    let view = UIView()
+    superview.addSubview(view)
+
+    activate(
+      view.anchor.top.left.width.height
+    )
+
+    XCTAssertEqual(view.constraints.count, 0)
+    XCTAssertEqual(superview.constraints.count, 4)
+
+    superview.updateConstraintsIfNeeded()
+    superview.layoutIfNeeded()
+
+    wait(for: 0.1)
+
+    XCTAssertEqual(view.frame.size, CGSize(width: 100, height: 100))
+
+    XCTAssertNotNil(view.anchor.find(.top))
+    XCTAssertNotNil(view.anchor.find(.left))
+    XCTAssertNotNil(view.anchor.find(.width))
+    XCTAssertNotNil(view.anchor.find(.height))
+    XCTAssertNil(view.anchor.find(.centerX))
+    XCTAssertNil(view.anchor.find(.centerY))
+  }
 }
