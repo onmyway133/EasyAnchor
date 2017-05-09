@@ -13,9 +13,10 @@ class ContentController: UIViewController {
     title = content.title
 
     view.addSubview(container)
-    container.backgroundColor = UIColor(hex: "#bdc3c7")
+    container.backgroundColor = UIColor(hex: "ecf0f1")
     activate(
-      container.anchor.center.width,
+      container.anchor.center,
+      container.anchor.width.equal.to(300),
       container.anchor.height.equal.to(container.anchor.width)
     )
 

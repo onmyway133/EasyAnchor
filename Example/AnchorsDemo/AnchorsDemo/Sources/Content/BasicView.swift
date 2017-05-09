@@ -8,6 +8,8 @@ class BasicView: UIView {
   let c = View(text: "c", color: Color.color1)
   let d = View(text: "d", color: Color.color1)
 
+  var animator: Animator!
+
   override func didMoveToSuperview() {
     super.didMoveToSuperview()
 
@@ -25,5 +27,24 @@ class BasicView: UIView {
       c.anchor.bottom.left,
       d.anchor.bottom.right
     )
+
+    animator = Animator(view: self, animations: [
+      {
+        self.container.anchor.find(.top)?.constant = 80
+        self.container.anchor.find(.left)?.constant = 80
+      },
+      {
+        self.container.anchor.find(.bottom)?.constant = -80
+        self.container.anchor.find(.right)?.constant = -80
+      },
+      {
+        self.container.anchor.find(.top)?.constant = 8
+        self.container.anchor.find(.left)?.constant = 8
+        self.container.anchor.find(.bottom)?.constant = -8
+        self.container.anchor.find(.right)?.constant = -8
+      }
+    ])
+
+    animator.start()
   }
 }

@@ -1,30 +1,37 @@
 import UIKit
 
-class Animator {
-  class Animation {
-    let block: () -> Void
+typealias Animation = () -> Void
 
-    init(block: @escaping () -> Void) {
-      self.block = block
+class Animator {
+  private let view: UIView
+  private let animations: [Animation]
+  private var index = 0
+
+  init(view: UIView, animations: [Animation]) {
+    self.animations = animations
+    self.view = view
+  }
+
+  func start() {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+      self.animate()
     }
   }
 
-  let animations: [Animation]
-  var index = 0
+  private func animate() {
+    let animation = animations[index % animations.count]
+    animation()
 
-  init(animations: [Animation]) {
-    self.animations = animations
-  }
+    let animator = UIViewPropertyAnimator(duration: 1, dampingRatio: 0.7)
+    animator.addAnimations { [weak self] in
+      self?.view.layoutIfNeeded()
+    }
 
-  func animate() {
-    let animation = animations[index]
-
-    let animator = UIViewPropertyAnimator(duration: 1, dampingRatio: 1)
-    animator.addAnimations(animation.block)
-    animator.addCompletion({ _ in
-      self.animate()
+    animator.addCompletion({ [weak self] _ in
+      self?.index += 1
+      self?.animate()
     })
 
-    animator.startAnimation(afterDelay: 2)
+    animator.startAnimation(afterDelay: 1)
   }
 }
