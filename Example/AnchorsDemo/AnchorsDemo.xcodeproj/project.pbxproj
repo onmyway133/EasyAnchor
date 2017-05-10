@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8BE492621400AE9ACA47760D /* Pods_AnchorsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855ABCE79AE8025BDA3D5B66 /* Pods_AnchorsDemo.framework */; };
 		D2EC2AD71EC2663300818824 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EC2AD61EC2663300818824 /* GroupView.swift */; };
+		D2EC2AD91EC2EB3D00818824 /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EC2AD81EC2EB3D00818824 /* PagingView.swift */; };
+		D2EC2ADB1EC2EB4300818824 /* DistributeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EC2ADA1EC2EB4300818824 /* DistributeView.swift */; };
 		D2F713031EC115C800CE2CE0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F713021EC115C800CE2CE0 /* View.swift */; };
 		D2F713061EC1170100CE2CE0 /* ContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F713051EC1170100CE2CE0 /* ContentController.swift */; };
 		D2F713081EC117A700CE2CE0 /* ApplyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F713071EC117A700CE2CE0 /* ApplyView.swift */; };
@@ -26,6 +28,8 @@
 		C5FD634349FF3AE23C4BB7CF /* Pods-AnchorsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnchorsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnchorsDemo/Pods-AnchorsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		CE78087575E54F7C69FAAE57 /* Pods-AnchorsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnchorsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnchorsDemo/Pods-AnchorsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D2EC2AD61EC2663300818824 /* GroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		D2EC2AD81EC2EB3D00818824 /* PagingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
+		D2EC2ADA1EC2EB4300818824 /* DistributeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistributeView.swift; sourceTree = "<group>"; };
 		D2F713021EC115C800CE2CE0 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		D2F713051EC1170100CE2CE0 /* ContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentController.swift; sourceTree = "<group>"; };
 		D2F713071EC117A700CE2CE0 /* ApplyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyView.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				D2F713071EC117A700CE2CE0 /* ApplyView.swift */,
 				D2F713091EC1198300CE2CE0 /* BasicView.swift */,
 				D2EC2AD61EC2663300818824 /* GroupView.swift */,
+				D2EC2AD81EC2EB3D00818824 /* PagingView.swift */,
+				D2EC2ADA1EC2EB4300818824 /* DistributeView.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -265,9 +271,11 @@
 				D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */,
 				D2F7130A1EC1198300CE2CE0 /* BasicView.swift in Sources */,
 				D2F713081EC117A700CE2CE0 /* ApplyView.swift in Sources */,
+				D2EC2ADB1EC2EB4300818824 /* DistributeView.swift in Sources */,
 				D2EC2AD71EC2663300818824 /* GroupView.swift in Sources */,
 				D2F713101EC1268C00CE2CE0 /* Color.swift in Sources */,
 				D2F7130E1EC1252800CE2CE0 /* Animator.swift in Sources */,
+				D2EC2AD91EC2EB3D00818824 /* PagingView.swift in Sources */,
 				D2F713031EC115C800CE2CE0 /* View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

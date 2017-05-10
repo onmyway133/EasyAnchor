@@ -10,7 +10,9 @@ class ListController: UITableViewController {
   let contents: [Content] = [
     Content(title: "Basic", view: BasicView.self),
     Content(title: "Apply", view: ApplyView.self),
-    Content(title: "Group", view: GroupView.self)
+    Content(title: "Group", view: GroupView.self),
+    Content(title: "Paging", view: PagingView.self),
+    Content(title: "Distribute", view: DistributeView.self)
   ]
 
   override func viewDidLoad() {

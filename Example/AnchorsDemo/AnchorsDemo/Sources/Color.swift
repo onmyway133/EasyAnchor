@@ -6,4 +6,5 @@ struct Color {
   static let color1 = UIColor(hex: "#e74c3c")
   static let color2 = UIColor(hex: "#16a085")
   static let color3 = UIColor(hex: "#9b59b6")
+  static let color4 = UIColor(hex: "f1c40f")
 }

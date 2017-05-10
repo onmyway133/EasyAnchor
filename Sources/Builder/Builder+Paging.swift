@@ -24,7 +24,6 @@ public extension Builder {
         if i == views.count - 1 {
           anchors.append(view.anchor.right.equal.to(scrollView.anchor.right))
         }
-
       })
 
       return Group(producers: anchors).constraints
