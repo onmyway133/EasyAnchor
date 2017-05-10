@@ -12,6 +12,8 @@ class ContentController: UIViewController {
     view.backgroundColor = .white
     title = content.title
 
+    automaticallyAdjustsScrollViewInsets = false
+
     view.addSubview(container)
     container.backgroundColor = UIColor(hex: "ecf0f1")
     activate(
