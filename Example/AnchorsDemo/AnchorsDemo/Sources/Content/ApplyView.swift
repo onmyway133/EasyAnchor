@@ -4,8 +4,8 @@ import Anchors
 class ApplyView: UIView {
   let container = View(text: "", color: Color.container)
   let a = View(text: "a", color: Color.color1)
-  let b = View(text: "b", color: Color.color1)
-  let c = View(text: "c", color: Color.color1)
+  let b = View(text: "b", color: Color.color2)
+  let c = View(text: "c", color: Color.color3)
 
   var animator: Animator!
 

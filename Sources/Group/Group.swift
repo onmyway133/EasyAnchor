@@ -1,7 +1,7 @@
 import UIKit
 
 /// A simple data structure to group a set of constraints
-public class Group {
+public class Group: Equatable {
   public let constraints: [NSLayoutConstraint]
   public var isActive: Bool = false {
     didSet {
@@ -25,4 +25,8 @@ public class Group {
 
     self.init(constraints: constraints)
   }
+}
+
+public func ==(lhs: Group, rhs: Group) -> Bool {
+  return lhs.constraints == rhs.constraints
 }
