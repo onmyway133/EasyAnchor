@@ -1,6 +1,8 @@
 import UIKit
 
 public extension Anchor {
+
+  /// Find a constraint based on an attribute
   func find(_ attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
     guard let view = item as? UIView else {
       return nil

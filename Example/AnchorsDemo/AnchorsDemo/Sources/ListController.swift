@@ -13,7 +13,8 @@ class ListController: UITableViewController {
     Content(title: "Group", view: GroupView.self),
     Content(title: "Paging", view: PagingView.self),
     Content(title: "Distribute", view: DistributeView.self),
-    Content(title: "Piano", view: PianoView.self)
+    Content(title: "Piano", view: PianoView.self),
+    Content(title: "Find", view: FindView.self)
   ]
 
   override func viewDidLoad() {

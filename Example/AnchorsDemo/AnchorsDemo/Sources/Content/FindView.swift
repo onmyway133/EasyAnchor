@@ -18,28 +18,35 @@ class FindView: UIView {
     }
 
     activate(
-      container.anchor.center,
+      container.anchor.center.width,
       a.anchor.left.right.top,
       b.anchor.left.right,
       c.anchor.left.right.bottom,
       b.anchor.top.equal.to(a.anchor.bottom),
-      c.anchor.top.equal.to(b.anchor.bottom)
+      c.anchor.top.equal.to(b.anchor.bottom),
+      a.anchor.height.equal.to(30),
+      b.anchor.height.equal.to(30),
+      c.anchor.height.equal.to(30)
     )
 
     animator = Animator(view: self, animations: [
       {
-        self.container.anchor.find(.top)?.constant = 80
-        self.container.anchor.find(.left)?.constant = 80
+        self.a.anchor.find(.height)?.constant = 100
       },
       {
-        self.container.anchor.find(.bottom)?.constant = -80
-        self.container.anchor.find(.right)?.constant = -80
+        self.b.anchor.find(.height)?.constant = 100
       },
       {
-        self.container.anchor.find(.top)?.constant = 8
-        self.container.anchor.find(.left)?.constant = 8
-        self.container.anchor.find(.bottom)?.constant = -8
-        self.container.anchor.find(.right)?.constant = -8
+        self.c.anchor.find(.height)?.constant = 100
+      },
+      {
+        self.a.anchor.find(.height)?.constant = 30
+      },
+      {
+        self.b.anchor.find(.height)?.constant = 30
+      },
+      {
+        self.c.anchor.find(.height)?.constant = 30
       }
       ])
 

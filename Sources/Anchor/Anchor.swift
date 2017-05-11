@@ -22,6 +22,7 @@ public class Anchor: ConstraintProducer {
   // key: attribute
   // value: constant
   var pins: [Pin] = []
+
   var multiplierValue: CGFloat = 1
   var priorityValue: Float?
   var identifierValue: String?
@@ -29,10 +30,12 @@ public class Anchor: ConstraintProducer {
   var relationValue: NSLayoutRelation = .equal
   var toValue: To = .none
 
+  /// Init with View
   init(view: UIView) {
     self.item = view
   }
 
+  /// Init with Layout Guide
   @available(iOS 9, *)
   init(layoutGuide: UILayoutGuide) {
     self.item = layoutGuide
