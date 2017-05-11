@@ -1,7 +1,7 @@
 import UIKit
 
 public extension Builder {
-  public class Distribute: ConstraintProducer {
+  public class HorizontalDistribute: ConstraintProducer {
 
     let views: [UIView]
     let spacing: CGFloat

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8BE492621400AE9ACA47760D /* Pods_AnchorsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855ABCE79AE8025BDA3D5B66 /* Pods_AnchorsDemo.framework */; };
 		D22D006F1EC3CA26000C9B4B /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D006E1EC3CA26000C9B4B /* PianoView.swift */; };
+		D22D00711EC43BCC000C9B4B /* FindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D00701EC43BCC000C9B4B /* FindView.swift */; };
 		D2EC2AD71EC2663300818824 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EC2AD61EC2663300818824 /* GroupView.swift */; };
 		D2EC2AD91EC2EB3D00818824 /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EC2AD81EC2EB3D00818824 /* PagingView.swift */; };
 		D2EC2ADB1EC2EB4300818824 /* DistributeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EC2ADA1EC2EB4300818824 /* DistributeView.swift */; };
@@ -29,6 +30,7 @@
 		C5FD634349FF3AE23C4BB7CF /* Pods-AnchorsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnchorsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnchorsDemo/Pods-AnchorsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		CE78087575E54F7C69FAAE57 /* Pods-AnchorsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnchorsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnchorsDemo/Pods-AnchorsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D22D006E1EC3CA26000C9B4B /* PianoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
+		D22D00701EC43BCC000C9B4B /* FindView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindView.swift; sourceTree = "<group>"; };
 		D2EC2AD61EC2663300818824 /* GroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		D2EC2AD81EC2EB3D00818824 /* PagingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
 		D2EC2ADA1EC2EB4300818824 /* DistributeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistributeView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				D2EC2AD81EC2EB3D00818824 /* PagingView.swift */,
 				D2EC2ADA1EC2EB4300818824 /* DistributeView.swift */,
 				D22D006E1EC3CA26000C9B4B /* PianoView.swift */,
+				D22D00701EC43BCC000C9B4B /* FindView.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			files = (
 				D5C7F75D1C3BCA1E008CDDBA /* ListController.swift in Sources */,
 				D2F713061EC1170100CE2CE0 /* ContentController.swift in Sources */,
+				D22D00711EC43BCC000C9B4B /* FindView.swift in Sources */,
 				D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */,
 				D2F7130A1EC1198300CE2CE0 /* BasicView.swift in Sources */,
 				D22D006F1EC3CA26000C9B4B /* PianoView.swift in Sources */,

@@ -11,17 +11,17 @@ public extension Anchor {
     return Builder.Apply(anchor: self, views: views)
   }
 
-  /// Build a paging scrollView
-  func pagingHorizontally(togetherWith views: [UIView], in scrollView: UIScrollView) -> Builder.Paging {
+  /// Build a paging scrollView horizontally
+  func pagingHorizontally(togetherWith views: [UIView], in scrollView: UIScrollView) -> Builder.HorizontalPaging {
     var views: [UIView] = views
     views.append(contentsOf: [item as? UIView].flatMap({ $0 }))
-    return Builder.Paging(scrollView: scrollView, views: views)
+    return Builder.HorizontalPaging(scrollView: scrollView, views: views)
   }
 
   /// Distribute views horizontally
-  func distributeHorizontally(togetherWith views: [UIView], spacing: CGFloat) -> Builder.Distribute {
+  func distributeHorizontally(togetherWith views: [UIView], spacing: CGFloat) -> Builder.HorizontalDistribute {
     var views: [UIView] = views
     views.append(contentsOf: [item as? UIView].flatMap({ $0 }))
-    return Builder.Distribute(views: views, spacing: spacing)
+    return Builder.HorizontalDistribute(views: views, spacing: spacing)
   }
 }
