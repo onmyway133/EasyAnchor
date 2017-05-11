@@ -21,7 +21,7 @@ class ApplyView: UIView {
       container.anchor.edges.insets(8),
       a.anchor.top.width.right,
       a.anchor.height.equal.to(60),
-      Builder.apply(a.anchor.left.height, to: [b, c]),
+      a.anchor.left.height.apply(to: [b, c]),
       b.anchor.centerY,
       b.anchor.width.equal.to(a.anchor).multiplier(0.5),
       c.anchor.width.equal.to(b.anchor).multiplier(0.5),

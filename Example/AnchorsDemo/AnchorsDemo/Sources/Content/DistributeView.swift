@@ -21,10 +21,10 @@ class DistributeView: UIView {
       container.anchor.edges.insets(8),
       a.anchor.left.top.bottom,
       a.anchor.width.equal.to(40),
-      Builder.apply(a.anchor.width, to: [b, c]),
+      a.anchor.width.apply(to: [b, c]),
       b.anchor.top.bottom,
       c.anchor.right.top.bottom,
-      Builder.distribute(horizontally: [a, b, c], spacing: 50)
+      a.anchor.distributeHorizontally(togetherWith: [b, c], spacing: 50)
     )
 
     animator = Animator(view: self, animations: [

@@ -21,7 +21,7 @@ class BasicView: UIView {
     activate(
       container.anchor.edges.insets(8),
       a.anchor.width.height.equal.to(60),
-      Builder.apply(a.anchor.width.height, to: [b, c, d]),
+      a.anchor.width.height.apply(to: [b, c, d]),
       a.anchor.top.left,
       b.anchor.top.right,
       c.anchor.bottom.left,
