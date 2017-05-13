@@ -35,7 +35,7 @@ How new APIs were introduced over the years, so you know to set your deployment 
 - `isActive` since iOS 8, macOS 10.10
 - `NSLayoutAnchor`, `UI|NSLayoutGuide` since iOS 9, macOS 10.11
 
-### Do you need a another Auto Layout framework?
+### Do you need another Auto Layout framework?
 
 All the Auto Layout frameworks you see are just convenient ways to build `NSLayoutConstraint`, in fact these are what you normally need
 
