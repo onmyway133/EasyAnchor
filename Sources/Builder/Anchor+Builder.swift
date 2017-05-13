@@ -12,17 +12,25 @@ public extension Anchor {
   }
 
   /// Build a paging scrollView horizontally
-  func pagingHorizontally(togetherWith views: [UIView], in scrollView: UIScrollView) -> Builder.HorizontalPaging {
+  func pagingHorizontally(togetherWith views: [UIView], in scrollView: UIScrollView) -> Builder.PagingHorizontally {
     var views: [UIView] = views
     views.append(contentsOf: [item as? UIView].flatMap({ $0 }))
-    return Builder.HorizontalPaging(scrollView: scrollView, views: views)
+    return Builder.PagingHorizontally(scrollView: scrollView, views: views)
   }
 
-  /// Distribute views horizontally
-  func distributeHorizontally(togetherWith views: [UIView], spacing: CGFloat) -> Builder.HorizontalDistribute {
+  /// Add fixed spacing. The views will resize
+  func fixedSpacingHorizontally(togetherWith views: [UIView], spacing: CGFloat) -> Builder.FixedSpacingHorizontally {
     var array: [UIView] = []
     array.append(contentsOf: [item as? UIView].flatMap({ $0 }))
     array.append(contentsOf: views)
-    return Builder.HorizontalDistribute(views: array, spacing: spacing)
+    return Builder.FixedSpacingHorizontally(views: array, spacing: spacing)
+  }
+
+  /// Add dynamic spacing. The spacing will resize
+  func dynamicSpacingHorizontally(togetherWith views: [UIView], spacing: CGFloat) -> Builder.DynamicSpacingHorizontally {
+    var array: [UIView] = []
+    array.append(contentsOf: [item as? UIView].flatMap({ $0 }))
+    array.append(contentsOf: views)
+    return Builder.DynamicSpacingHorizontally(views: array, spacing: spacing)
   }
 }

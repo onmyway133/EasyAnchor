@@ -22,7 +22,7 @@ class DistributeView: UIView {
       a.anchor.left.top.bottom,
       c.anchor.right,
       a.anchor.top.bottom.width.apply(to: [b, c]),
-      a.anchor.distributeHorizontally(togetherWith: [b, c], spacing: 50)
+      a.anchor.fixedSpacingHorizontally(togetherWith: [b, c], spacing: 50)
     )
 
     animator = Animator(view: self, animations: [

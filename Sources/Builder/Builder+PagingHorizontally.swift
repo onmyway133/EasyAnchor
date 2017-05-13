@@ -1,7 +1,7 @@
 import UIKit
 
 public extension Builder {
-  public class HorizontalPaging: ConstraintProducer {
+  public class PagingHorizontally: ConstraintProducer {
     let scrollView: UIScrollView
     let views: [UIView]
 
