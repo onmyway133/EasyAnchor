@@ -159,9 +159,9 @@ activate(
 Use convenient attributes which combine multiple inner attributes
 
 ```swift
-a.anchor.center // centerX, centerY
-a.anchor.size // width, height
-a.anchor.edges // top, right, bottom, left
+a.anchor.center  // centerX, centerY
+a.anchor.size  // width, height
+a.anchor.edges  // top, right, bottom, left
 ```
 
 #### Convenient methods
@@ -169,8 +169,8 @@ a.anchor.edges // top, right, bottom, left
 Insets
 
 ```swift
-a.anchor.edges.insets(EdgeInsets(top: 1, left: 2, bottom: 3, right: 4)) // top+1, left+2, bottom+3, right+4
-a.anchor.edges.insets(5)	// top+5, left+5, bottom-5, right-5
+a.anchor.edges.insets(EdgeInsets(top: 1, left: 2, bottom: 3, right: 4))  // top+1, left+2, bottom+3, right+4
+a.anchor.edges.insets(5)  // top+5, left+5, bottom-5, right-5
 ```
 
 Padding
@@ -192,20 +192,20 @@ c.anchor.size.equal.to(d.anchor)
 Size to a constant
 
 ```swift
-a.anchor.height.equal.to(20)	// height==20
-b.anchor.size.equal.to(20)	// width==20, heigh==20
+a.anchor.height.equal.to(20)  // height==20
+b.anchor.size.equal.to(20)  // width==20, height==20
 ```
 
 Alernatively, you can just use constant
 
 ```swift
-c.anchor.width.constant(20) // width==20
+c.anchor.width.constant(20)  // width==20
 ```
 
 #### Ratio
 
 ```swift
-a.anchor.height.equal.to(a.anchor.width) // height==width
+a.anchor.height.equal.to(a.anchor.width)  // height==width
 ```
 
 ## Inference
