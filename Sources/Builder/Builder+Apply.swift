@@ -1,12 +1,16 @@
-import UIKit
+#if os(iOS) || os(tvOS)
+  import UIKit
+#elseif os(OSX)
+  import AppKit
+#endif
 
 public extension Builder {
   public class Apply: ConstraintProducer {
 
     let sourceAnchor: Anchor
-    let views: [UIView]
+    let views: [View]
 
-    init(anchor: Anchor, views: [UIView]) {
+    init(anchor: Anchor, views: [View]) {
       self.sourceAnchor = anchor
       self.views = views
     }

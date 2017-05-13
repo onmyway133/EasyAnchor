@@ -1,4 +1,8 @@
-import UIKit
+#if os(iOS) || os(tvOS)
+  import UIKit
+#elseif os(OSX)
+  import AppKit
+#endif
 
 /// A simple data structure to group a set of constraints
 public class Group: Equatable {

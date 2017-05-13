@@ -1,4 +1,8 @@
-import UIKit
+#if os(iOS) || os(tvOS)
+  import UIKit
+#elseif os(OSX)
+  import AppKit
+#endif
 
 public class Anchor: ConstraintProducer {
   enum To {
@@ -31,13 +35,13 @@ public class Anchor: ConstraintProducer {
   var toValue: To = .none
 
   /// Init with View
-  init(view: UIView) {
+  init(view: View) {
     self.item = view
   }
 
   /// Init with Layout Guide
   @available(iOS 9, *)
-  init(layoutGuide: UILayoutGuide) {
+  init(layoutGuide: LayoutGuide) {
     self.item = layoutGuide
   }
 }

@@ -1,11 +1,13 @@
+#if os(iOS) || os(tvOS)
 import UIKit
+
 
 public extension Builder {
   public class PagingHorizontally: ConstraintProducer {
     let scrollView: UIScrollView
-    let views: [UIView]
+    let views: [View]
 
-    init(scrollView: UIScrollView, views: [UIView]) {
+    init(scrollView: UIScrollView, views: [View]) {
       self.scrollView = scrollView
       self.views = views
     }
@@ -30,3 +32,5 @@ public extension Builder {
     }
   }
 }
+
+#endif

@@ -1,12 +1,16 @@
-import UIKit
+#if os(iOS) || os(tvOS)
+  import UIKit
+#elseif os(OSX)
+  import AppKit
+#endif
 
 public extension Builder {
   public class FixedSpacingHorizontally: ConstraintProducer {
 
-    let views: [UIView]
+    let views: [View]
     let spacing: CGFloat
 
-    init(views: [UIView], spacing: CGFloat) {
+    init(views: [View], spacing: CGFloat) {
       self.views = views
       self.spacing = spacing
     }

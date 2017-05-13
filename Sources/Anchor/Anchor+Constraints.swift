@@ -1,4 +1,8 @@
-import UIKit
+#if os(iOS) || os(tvOS)
+  import UIKit
+#elseif os(OSX)
+  import AppKit
+#endif
 
 public extension Anchor {
   func constraints() -> [NSLayoutConstraint] {
@@ -12,7 +16,7 @@ public extension Anchor {
         $0.priority = priorityValue
       }
 
-      ($0.firstItem as? UIView)?.translatesAutoresizingMaskIntoConstraints = false
+      ($0.firstItem as? View)?.translatesAutoresizingMaskIntoConstraints = false
     }
 
     referenceBlock?(constraints)
@@ -30,7 +34,7 @@ fileprivate extension Anchor {
     case .size:
       return outputForSize()
     case .none:
-      if let superview = (item as? UIView)?.superview {
+      if let superview = (item as? View)?.superview {
         return output(anchor: Anchor(view: superview))
       } else {
         return []

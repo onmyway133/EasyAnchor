@@ -29,8 +29,6 @@
 		D2D43D531EC7450300065343 /* Anchor+To.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D351EC7450300065343 /* Anchor+To.swift */; };
 		D2D43D541EC7450300065343 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D361EC7450300065343 /* Anchor.swift */; };
 		D2D43D551EC7450300065343 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D361EC7450300065343 /* Anchor.swift */; };
-		D2D43D561EC7450300065343 /* Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D371EC7450300065343 /* Anchors.swift */; };
-		D2D43D571EC7450300065343 /* Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D371EC7450300065343 /* Anchors.swift */; };
 		D2D43D581EC7450300065343 /* Anchor+Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D391EC7450300065343 /* Anchor+Builder.swift */; };
 		D2D43D591EC7450300065343 /* Anchor+Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D391EC7450300065343 /* Anchor+Builder.swift */; };
 		D2D43D5A1EC7450300065343 /* Builder+Apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D3A1EC7450300065343 /* Builder+Apply.swift */; };
@@ -41,14 +39,18 @@
 		D2D43D5F1EC7450300065343 /* Builder+FixedSpacingHorizontally.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D3C1EC7450300065343 /* Builder+FixedSpacingHorizontally.swift */; };
 		D2D43D601EC7450300065343 /* Builder+PagingHorizontally.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D3D1EC7450300065343 /* Builder+PagingHorizontally.swift */; };
 		D2D43D611EC7450300065343 /* Builder+PagingHorizontally.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D3D1EC7450300065343 /* Builder+PagingHorizontally.swift */; };
-		D2D43D621EC7450300065343 /* ConstraintProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D3E1EC7450300065343 /* ConstraintProducer.swift */; };
-		D2D43D631EC7450300065343 /* ConstraintProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D3E1EC7450300065343 /* ConstraintProducer.swift */; };
 		D2D43D641EC7450300065343 /* LayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D401EC7450300065343 /* LayoutGuide+Extensions.swift */; };
 		D2D43D651EC7450300065343 /* LayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D401EC7450300065343 /* LayoutGuide+Extensions.swift */; };
 		D2D43D661EC7450300065343 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D411EC7450300065343 /* View+Extensions.swift */; };
 		D2D43D671EC7450300065343 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D411EC7450300065343 /* View+Extensions.swift */; };
 		D2D43D681EC7450300065343 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D431EC7450300065343 /* Group.swift */; };
 		D2D43D691EC7450300065343 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D431EC7450300065343 /* Group.swift */; };
+		D2D43D6D1EC7457D00065343 /* Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D6B1EC7457D00065343 /* Anchors.swift */; };
+		D2D43D6E1EC7457D00065343 /* Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D6B1EC7457D00065343 /* Anchors.swift */; };
+		D2D43D6F1EC7457D00065343 /* ConstraintProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D6C1EC7457D00065343 /* ConstraintProducer.swift */; };
+		D2D43D701EC7457D00065343 /* ConstraintProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D6C1EC7457D00065343 /* ConstraintProducer.swift */; };
+		D2D43D721EC7458500065343 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D711EC7458500065343 /* Types.swift */; };
+		D2D43D731EC7458500065343 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D711EC7458500065343 /* Types.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* Anchors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Anchors.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* Anchors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Anchors.framework */; };
 /* End PBXBuildFile section */
@@ -82,16 +84,17 @@
 		D2D43D341EC7450300065343 /* Anchor+Relation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+Relation.swift"; sourceTree = "<group>"; };
 		D2D43D351EC7450300065343 /* Anchor+To.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+To.swift"; sourceTree = "<group>"; };
 		D2D43D361EC7450300065343 /* Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
-		D2D43D371EC7450300065343 /* Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchors.swift; sourceTree = "<group>"; };
 		D2D43D391EC7450300065343 /* Anchor+Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+Builder.swift"; sourceTree = "<group>"; };
 		D2D43D3A1EC7450300065343 /* Builder+Apply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Builder+Apply.swift"; sourceTree = "<group>"; };
 		D2D43D3B1EC7450300065343 /* Builder+DynamicSpacingHorizontally.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Builder+DynamicSpacingHorizontally.swift"; sourceTree = "<group>"; };
 		D2D43D3C1EC7450300065343 /* Builder+FixedSpacingHorizontally.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Builder+FixedSpacingHorizontally.swift"; sourceTree = "<group>"; };
 		D2D43D3D1EC7450300065343 /* Builder+PagingHorizontally.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Builder+PagingHorizontally.swift"; sourceTree = "<group>"; };
-		D2D43D3E1EC7450300065343 /* ConstraintProducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintProducer.swift; sourceTree = "<group>"; };
 		D2D43D401EC7450300065343 /* LayoutGuide+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		D2D43D411EC7450300065343 /* View+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		D2D43D431EC7450300065343 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		D2D43D6B1EC7457D00065343 /* Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchors.swift; sourceTree = "<group>"; };
+		D2D43D6C1EC7457D00065343 /* ConstraintProducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintProducer.swift; sourceTree = "<group>"; };
+		D2D43D711EC7458500065343 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
 		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* Anchors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Anchors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +186,16 @@
 			path = Group;
 			sourceTree = "<group>";
 		};
+		D2D43D6A1EC7457D00065343 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D2D43D6B1EC7457D00065343 /* Anchors.swift */,
+				D2D43D6C1EC7457D00065343 /* ConstraintProducer.swift */,
+				D2D43D711EC7458500065343 /* Types.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
@@ -218,10 +231,9 @@
 		D5C629691C3A809D007F7B7C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D2D43D6A1EC7457D00065343 /* Core */,
 				D2D43D2D1EC7450300065343 /* Anchor */,
-				D2D43D371EC7450300065343 /* Anchors.swift */,
 				D2D43D381EC7450300065343 /* Builder */,
-				D2D43D3E1EC7450300065343 /* ConstraintProducer.swift */,
 				D2D43D3F1EC7450300065343 /* Extensions */,
 				D2D43D421EC7450300065343 /* Group */,
 			);
@@ -418,20 +430,21 @@
 				D2D43D601EC7450300065343 /* Builder+PagingHorizontally.swift in Sources */,
 				D2D43D441EC7450300065343 /* Anchor+Attributes.swift in Sources */,
 				D2D43D581EC7450300065343 /* Anchor+Builder.swift in Sources */,
+				D2D43D721EC7458500065343 /* Types.swift in Sources */,
 				D2D43D481EC7450300065343 /* Anchor+Constraints.swift in Sources */,
 				D2D43D5E1EC7450300065343 /* Builder+FixedSpacingHorizontally.swift in Sources */,
-				D2D43D561EC7450300065343 /* Anchors.swift in Sources */,
 				D2D43D681EC7450300065343 /* Group.swift in Sources */,
 				D2D43D641EC7450300065343 /* LayoutGuide+Extensions.swift in Sources */,
 				D2D43D4A1EC7450300065343 /* Anchor+Convenience.swift in Sources */,
+				D2D43D6D1EC7457D00065343 /* Anchors.swift in Sources */,
 				D2D43D521EC7450300065343 /* Anchor+To.swift in Sources */,
 				D2D43D5A1EC7450300065343 /* Builder+Apply.swift in Sources */,
 				D2D43D661EC7450300065343 /* View+Extensions.swift in Sources */,
 				D2D43D4C1EC7450300065343 /* Anchor+Find.swift in Sources */,
 				D2D43D4E1EC7450300065343 /* Anchor+Helper.swift in Sources */,
 				D2D43D461EC7450300065343 /* Anchor+Configuration.swift in Sources */,
-				D2D43D621EC7450300065343 /* ConstraintProducer.swift in Sources */,
 				D2D43D541EC7450300065343 /* Anchor.swift in Sources */,
+				D2D43D6F1EC7457D00065343 /* ConstraintProducer.swift in Sources */,
 				D2D43D501EC7450300065343 /* Anchor+Relation.swift in Sources */,
 				D2D43D5C1EC7450300065343 /* Builder+DynamicSpacingHorizontally.swift in Sources */,
 			);
@@ -453,20 +466,21 @@
 				D2D43D611EC7450300065343 /* Builder+PagingHorizontally.swift in Sources */,
 				D2D43D451EC7450300065343 /* Anchor+Attributes.swift in Sources */,
 				D2D43D591EC7450300065343 /* Anchor+Builder.swift in Sources */,
+				D2D43D731EC7458500065343 /* Types.swift in Sources */,
 				D2D43D491EC7450300065343 /* Anchor+Constraints.swift in Sources */,
 				D2D43D5F1EC7450300065343 /* Builder+FixedSpacingHorizontally.swift in Sources */,
-				D2D43D571EC7450300065343 /* Anchors.swift in Sources */,
 				D2D43D691EC7450300065343 /* Group.swift in Sources */,
 				D2D43D651EC7450300065343 /* LayoutGuide+Extensions.swift in Sources */,
 				D2D43D4B1EC7450300065343 /* Anchor+Convenience.swift in Sources */,
+				D2D43D6E1EC7457D00065343 /* Anchors.swift in Sources */,
 				D2D43D531EC7450300065343 /* Anchor+To.swift in Sources */,
 				D2D43D5B1EC7450300065343 /* Builder+Apply.swift in Sources */,
 				D2D43D671EC7450300065343 /* View+Extensions.swift in Sources */,
 				D2D43D4D1EC7450300065343 /* Anchor+Find.swift in Sources */,
 				D2D43D4F1EC7450300065343 /* Anchor+Helper.swift in Sources */,
 				D2D43D471EC7450300065343 /* Anchor+Configuration.swift in Sources */,
-				D2D43D631EC7450300065343 /* ConstraintProducer.swift in Sources */,
 				D2D43D551EC7450300065343 /* Anchor.swift in Sources */,
+				D2D43D701EC7457D00065343 /* ConstraintProducer.swift in Sources */,
 				D2D43D511EC7450300065343 /* Anchor+Relation.swift in Sources */,
 				D2D43D5D1EC7450300065343 /* Builder+DynamicSpacingHorizontally.swift in Sources */,
 			);
@@ -598,7 +612,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Anchors/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Anchors-iOS";
 				PRODUCT_NAME = Anchors;
@@ -618,7 +632,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Anchors/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Anchors-iOS";
 				PRODUCT_NAME = Anchors;
@@ -676,7 +690,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Anchors/Info-Mac.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Anchors-Mac";
 				PRODUCT_NAME = Anchors;
 				SDKROOT = macosx;
@@ -700,7 +714,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Anchors/Info-Mac.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Anchors-Mac";
 				PRODUCT_NAME = Anchors;
 				SDKROOT = macosx;

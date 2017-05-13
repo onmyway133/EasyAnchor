@@ -4,14 +4,14 @@ import XCTest
 class Tests: XCTestCase {
 
   func testPins() {
-    let anchor = UIView().anchor.center
+    let anchor = View().anchor.center
     XCTAssertEqual(anchor.pins.count, 2)
     XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .centerX }))
     XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .centerY }))
   }
 
   func testInsets() {
-    let anchor = UIView().anchor.edges.insets(UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4))
+    let anchor = View().anchor.edges.insets(UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4))
     XCTAssertEqual(anchor.pins.count, 4)
     XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .top && $0.constant == 1 }))
     XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .left && $0.constant == 2 }))
@@ -20,7 +20,7 @@ class Tests: XCTestCase {
   }
 
   func testConfig() {
-    let anchor = UIView().anchor.center.constant(10).multiplier(1.5).priority(999).id("pinToTop")
+    let anchor = View().anchor.center.constant(10).multiplier(1.5).priority(999).id("pinToTop")
     XCTAssertEqual(anchor.pins.count, 2)
     XCTAssertEqual(anchor.multiplierValue, 1.5)
     XCTAssertEqual(anchor.priorityValue, 999)
@@ -30,20 +30,20 @@ class Tests: XCTestCase {
   }
 
   func testRelation() {
-    let anchor = UIView().anchor.greaterThanOrEqual
+    let anchor = View().anchor.greaterThanOrEqual
     XCTAssertEqual(anchor.relationValue, .greaterThanOrEqual)
   }
 
   func testSuperview() {
-    let constraints = UIView().anchor.center.constraints()
+    let constraints = View().anchor.center.constraints()
     XCTAssertEqual(constraints.isEmpty, true)
   }
 
   func testRef() {
     var constraint: NSLayoutConstraint?
 
-    let superview = UIView()
-    let view = UIView()
+    let superview = View()
+    let view = View()
     superview.addSubview(view)
 
     let constraints = view.anchor.center.constant(10).ref({ constraint = $0.first }).constraints()
@@ -54,8 +54,8 @@ class Tests: XCTestCase {
   }
 
   func testSize() {
-    let superview = UIView()
-    let view = UIView()
+    let superview = View()
+    let view = View()
     superview.addSubview(view)
 
     let constraints = view.anchor.size.equal.to(10).constraints()
@@ -76,9 +76,9 @@ class Tests: XCTestCase {
   }
 
   func testAnotherAnchorWithoutPins() {
-    let superview = UIView()
-    let view1 = UIView()
-    let view2 = UIView()
+    let superview = View()
+    let view1 = View()
+    let view2 = View()
     superview.addSubview(view1)
     superview.addSubview(view2)
 
@@ -97,9 +97,9 @@ class Tests: XCTestCase {
   }
 
   func testAnotherAnchorWithMismatchPinCount() {
-    let superview = UIView()
-    let view1 = UIView()
-    let view2 = UIView()
+    let superview = View()
+    let view1 = View()
+    let view2 = View()
     superview.addSubview(view1)
     superview.addSubview(view2)
 
@@ -113,8 +113,8 @@ class Tests: XCTestCase {
   }
 
   func testNoAnchor() {
-    let superview = UIView()
-    let view = UIView()
+    let superview = View()
+    let view = View()
     superview.addSubview(view)
 
     let constraints = view.anchor.edges.constraints()
@@ -122,7 +122,7 @@ class Tests: XCTestCase {
   }
 
   func testRatio() {
-    let view = UIView()
+    let view = View()
     let constraints = view.anchor.width.equal.to(10).constraints()
       + view.anchor.height.equal.to(view.anchor.width).multiplier(1.5).constraints()
 
@@ -137,8 +137,8 @@ class Tests: XCTestCase {
   }
 
   func testActivate() {
-    let superview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
-    let view = UIView()
+    let superview = View(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+    let view = View()
     superview.addSubview(view)
 
     activate(view.anchor.edges.equal.to(superview.anchor))
@@ -154,8 +154,8 @@ class Tests: XCTestCase {
   }
 
   func testFind() {
-    let superview = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-    let view = UIView()
+    let superview = View(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    let view = View()
     superview.addSubview(view)
 
     activate(
@@ -185,8 +185,8 @@ class Tests: XCTestCase {
   }
 
   func testFindWidthHeight() {
-    let superview = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-    let view = UIView()
+    let superview = View(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    let view = View()
     superview.addSubview(view)
 
     activate(

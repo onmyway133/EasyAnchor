@@ -1,13 +1,17 @@
-import UIKit
+#if os(iOS) || os(tvOS)
+  import UIKit
+#elseif os(OSX)
+  import AppKit
+#endif
 
 public extension Builder {
 
   @available(iOS 9.0, *)
   public class DynamicSpacingHorizontally: ConstraintProducer {
 
-    let views: [UIView]
+    let views: [View]
 
-    init(views: [UIView]) {
+    init(views: [View]) {
       self.views = views
     }
 
@@ -18,12 +22,12 @@ public extension Builder {
       }
 
       let pairs = zip(views[0...views.count-2], views[1...views.count-1])
-      var guides = [UILayoutGuide]()
+      var guides = [LayoutGuide]()
       var anchors = [Anchor]()
 
       // first - guide - second
       pairs.forEach({ first, second in
-        let guide = UILayoutGuide()
+        let guide = LayoutGuide()
         guides.append(guide)
         superview.addLayoutGuide(guide)
 

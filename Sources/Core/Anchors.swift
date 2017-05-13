@@ -1,4 +1,8 @@
-import UIKit
+#if os(iOS) || os(tvOS)
+  import UIKit
+#elseif os(OSX)
+  import AppKit
+#endif
 
 /// Produce constraints into group
 public func group(_ producers: ConstraintProducer ...) -> Group {

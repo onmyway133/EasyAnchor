@@ -1,10 +1,14 @@
-import UIKit
+#if os(iOS) || os(tvOS)
+  import UIKit
+#elseif os(OSX)
+  import AppKit
+#endif
 
 public extension Anchor {
 
   /// Find a constraint based on an attribute
   func find(_ attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
-    guard let view = item as? UIView else {
+    guard let view = item as? View else {
       return nil
     }
 

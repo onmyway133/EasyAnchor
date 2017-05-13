@@ -1,4 +1,9 @@
-import UIKit
+#if os(iOS) || os(tvOS)
+  import UIKit
+#elseif os(OSX)
+  import AppKit
+#endif
+
 
 public extension Anchor {
   var left: Anchor {
@@ -61,6 +66,8 @@ public extension Anchor {
     return self
   }
 
+#if os(iOS) || os(tvOS)
+
   var leftMargin: Anchor {
     pins.append(Pin(.leftMargin))
     return self
@@ -100,4 +107,6 @@ public extension Anchor {
     pins.append(Pin(.centerYWithinMargins))
     return self
   }
+#endif
+
 }
