@@ -320,7 +320,7 @@ For now, there is `Anchor` and `Builder` which conforms to `ConstraintProducer`,
 // This accepts a list of views, and build constraints
 class MyAwesomeLayout: ConstraintProducer {
   init(views: [UIView]) {
-  	// Your code goes here
+    // Your code goes here
   }
 
   func constraints() -> [NSLayoutConstraint] {
