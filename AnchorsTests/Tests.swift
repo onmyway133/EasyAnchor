@@ -11,7 +11,7 @@ class Tests: XCTestCase {
   }
 
   func testInsets() {
-    let anchor = View().anchor.edges.insets(UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4))
+    let anchor = View().anchor.edges.insets(EdgeInsets(top: 1, left: 2, bottom: 3, right: 4))
     XCTAssertEqual(anchor.pins.count, 4)
     XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .top && $0.constant == 1 }))
     XCTAssertTrue(anchor.pins.contains(where: { $0.attribute == .left && $0.constant == 2 }))
