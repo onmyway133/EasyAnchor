@@ -18,9 +18,10 @@ public extension Anchor {
   #if os(iOS) || os(tvOS)
   /// Build a paging scrollView horizontally
   func pagingHorizontally(togetherWith views: [View], in scrollView: UIScrollView) -> Builder.PagingHorizontally {
-    var views: [View] = views
-    views.append(contentsOf: [item as? View].flatMap({ $0 }))
-    return Builder.PagingHorizontally(scrollView: scrollView, views: views)
+    var array: [View] = []
+    array.append(contentsOf: [item as? View].flatMap({ $0 }))
+    array.append(contentsOf: views)
+    return Builder.PagingHorizontally(scrollView: scrollView, views: array)
   }
   #endif
 
