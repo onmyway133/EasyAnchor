@@ -30,23 +30,23 @@ class GroupView: UIView {
 
     animator = Animator(view: self, animations: [
       {
-        self.activate(self.g2)
+        self.toggle(self.g2)
       },
       {
-        self.activate(self.g3)
+        self.toggle(self.g3)
       },
       {
-        self.activate(self.g4)
+        self.toggle(self.g4)
       },
       {
-        self.activate(self.g1)
+        self.toggle(self.g1)
       }
       ])
 
     animator.start()
   }
 
-  func activate(_ group: Group) {
+  func toggle(_ group: Group) {
     [g1, g2, g3, g4].forEach { g in
       guard let g = g else {
         return
