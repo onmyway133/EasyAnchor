@@ -194,11 +194,43 @@ c.anchor.width.constant(20) // width=20
 a.anchor.height.equal.to(a.anchor.width) // height=width
 ```
 
+## Find existing constraints
+
+You don't need to declare variables to store `constraints`, you can just retrieve them back
+
+```swift
+a.anchor.find(.height)?.constant = 100
+
+// later
+b.anchor.find(.height)?.constant = 100
+
+// later
+c.anchor.find(.height)?.constant = 100
+```
+
+<div align = "center">
+<img src="Screenshots/find.gif" width="200" height="200" />
+</div>
+
 ## Animation
 
-## Update constraints with Group
+Animation is simple. You just change your `constraint` 's `isActive` or `constant` properties, then `layoutIfNeeded` in an animation block. You can use `UIView.animate` or `UIViewPropertyAnimator`
 
-## Find existing constraints
+```swift
+// Change constraint
+a.anchor.find(.height)?.constant = 100
+loginButtonHeightConstraint.isActive = false
+
+let animator = UIViewPropertyAnimator(duration: 1, dampingRatio: 0.7)
+animator.addAnimations { [weak self] in
+  self?.view.layoutIfNeeded()
+}
+
+animator.startAnimation(afterDelay: 1)
+```
+
+
+## Update constraints with Group
 
 ## Customize with ConstraintProducer
 
