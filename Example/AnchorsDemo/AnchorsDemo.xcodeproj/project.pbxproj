@@ -10,9 +10,10 @@
 		8BE492621400AE9ACA47760D /* Pods_AnchorsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855ABCE79AE8025BDA3D5B66 /* Pods_AnchorsDemo.framework */; };
 		D22D006F1EC3CA26000C9B4B /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D006E1EC3CA26000C9B4B /* PianoView.swift */; };
 		D22D00711EC43BCC000C9B4B /* FindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D00701EC43BCC000C9B4B /* FindView.swift */; };
+		D2D43D2C1EC733D400065343 /* DynamicSpacingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D2B1EC733D400065343 /* DynamicSpacingView.swift */; };
 		D2EC2AD71EC2663300818824 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EC2AD61EC2663300818824 /* GroupView.swift */; };
 		D2EC2AD91EC2EB3D00818824 /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EC2AD81EC2EB3D00818824 /* PagingView.swift */; };
-		D2EC2ADB1EC2EB4300818824 /* DistributeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EC2ADA1EC2EB4300818824 /* DistributeView.swift */; };
+		D2EC2ADB1EC2EB4300818824 /* FiedSpacingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EC2ADA1EC2EB4300818824 /* FiedSpacingView.swift */; };
 		D2F713031EC115C800CE2CE0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F713021EC115C800CE2CE0 /* View.swift */; };
 		D2F713061EC1170100CE2CE0 /* ContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F713051EC1170100CE2CE0 /* ContentController.swift */; };
 		D2F713081EC117A700CE2CE0 /* ApplyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F713071EC117A700CE2CE0 /* ApplyView.swift */; };
@@ -31,9 +32,10 @@
 		CE78087575E54F7C69FAAE57 /* Pods-AnchorsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnchorsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnchorsDemo/Pods-AnchorsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D22D006E1EC3CA26000C9B4B /* PianoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
 		D22D00701EC43BCC000C9B4B /* FindView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindView.swift; sourceTree = "<group>"; };
+		D2D43D2B1EC733D400065343 /* DynamicSpacingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicSpacingView.swift; sourceTree = "<group>"; };
 		D2EC2AD61EC2663300818824 /* GroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		D2EC2AD81EC2EB3D00818824 /* PagingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
-		D2EC2ADA1EC2EB4300818824 /* DistributeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistributeView.swift; sourceTree = "<group>"; };
+		D2EC2ADA1EC2EB4300818824 /* FiedSpacingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiedSpacingView.swift; sourceTree = "<group>"; };
 		D2F713021EC115C800CE2CE0 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		D2F713051EC1170100CE2CE0 /* ContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentController.swift; sourceTree = "<group>"; };
 		D2F713071EC117A700CE2CE0 /* ApplyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyView.swift; sourceTree = "<group>"; };
@@ -84,9 +86,10 @@
 				D2F713091EC1198300CE2CE0 /* BasicView.swift */,
 				D2EC2AD61EC2663300818824 /* GroupView.swift */,
 				D2EC2AD81EC2EB3D00818824 /* PagingView.swift */,
-				D2EC2ADA1EC2EB4300818824 /* DistributeView.swift */,
+				D2EC2ADA1EC2EB4300818824 /* FiedSpacingView.swift */,
 				D22D006E1EC3CA26000C9B4B /* PianoView.swift */,
 				D22D00701EC43BCC000C9B4B /* FindView.swift */,
+				D2D43D2B1EC733D400065343 /* DynamicSpacingView.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -279,9 +282,10 @@
 				D2F7130A1EC1198300CE2CE0 /* BasicView.swift in Sources */,
 				D22D006F1EC3CA26000C9B4B /* PianoView.swift in Sources */,
 				D2F713081EC117A700CE2CE0 /* ApplyView.swift in Sources */,
-				D2EC2ADB1EC2EB4300818824 /* DistributeView.swift in Sources */,
+				D2EC2ADB1EC2EB4300818824 /* FiedSpacingView.swift in Sources */,
 				D2EC2AD71EC2663300818824 /* GroupView.swift in Sources */,
 				D2F713101EC1268C00CE2CE0 /* Color.swift in Sources */,
+				D2D43D2C1EC733D400065343 /* DynamicSpacingView.swift in Sources */,
 				D2F7130E1EC1252800CE2CE0 /* Animator.swift in Sources */,
 				D2EC2AD91EC2EB3D00818824 /* PagingView.swift in Sources */,
 				D2F713031EC115C800CE2CE0 /* View.swift in Sources */,

@@ -1,7 +1,7 @@
 import UIKit
 import Anchors
 
-class DistributeView: UIView {
+class DynamicSpacingView: UIView {
   let container = View(text: "", color: Color.container)
   let a = View(text: "a", color: Color.color1)
   let b = View(text: "b", color: Color.color1)
@@ -19,18 +19,25 @@ class DistributeView: UIView {
 
     activate(
       container.anchor.edges.insets(8),
-      a.anchor.left.top.bottom,
+      a.anchor.size.equal.to(30),
+      b.anchor.size.equal.to(30),
+      c.anchor.size.equal.to(30),
+      a.anchor.left.centerY,
+      a.anchor.centerY.apply(to: [b, c]),
       c.anchor.right,
-      a.anchor.top.bottom.width.apply(to: [b, c]),
-      a.anchor.fixedSpacingHorizontally(togetherWith: [b, c], spacing: 50)
+      a.anchor.dynamicSpacingHorizontally(togetherWith: [b, c])
     )
 
     animator = Animator(view: self, animations: [
       {
-        self.container.anchor.find(.left)?.constant = 100
+        self.a.anchor.find(.width)?.constant = 60
       },
       {
-        self.container.anchor.find(.left)?.constant -= 100
+        self.c.anchor.find(.width)?.constant = 120
+      },
+      {
+        self.a.anchor.find(.width)?.constant = 30
+        self.c.anchor.find(.width)?.constant = 30
       }
       ])
 

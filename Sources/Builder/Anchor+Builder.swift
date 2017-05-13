@@ -26,11 +26,12 @@ public extension Anchor {
     return Builder.FixedSpacingHorizontally(views: array, spacing: spacing)
   }
 
-  /// Add dynamic spacing. The spacing will resize
-  func dynamicSpacingHorizontally(togetherWith views: [UIView], spacing: CGFloat) -> Builder.DynamicSpacingHorizontally {
+  /// Add dynamic spacing using LayoutGuide. The spacing will resize
+  @available(iOS 9.0, *)
+  func dynamicSpacingHorizontally(togetherWith views: [UIView]) -> Builder.DynamicSpacingHorizontally {
     var array: [UIView] = []
     array.append(contentsOf: [item as? UIView].flatMap({ $0 }))
     array.append(contentsOf: views)
-    return Builder.DynamicSpacingHorizontally(views: array, spacing: spacing)
+    return Builder.DynamicSpacingHorizontally(views: array)
   }
 }

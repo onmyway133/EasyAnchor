@@ -12,7 +12,8 @@ class ListController: UITableViewController {
     Content(title: "Apply", view: ApplyView.self),
     Content(title: "Group", view: GroupView.self),
     Content(title: "Paging", view: PagingView.self),
-    Content(title: "Distribute", view: DistributeView.self),
+    Content(title: "Fixed Spacing", view: FixedSpacingView.self),
+    Content(title: "Dynamic Spacing", view: DynamicSpacingView.self),
     Content(title: "Piano", view: PianoView.self),
     Content(title: "Find", view: FindView.self)
   ]
