@@ -335,6 +335,8 @@ activate(awesomeLayout)
 
 ## Build quickly with Builder
 
+Well, `Anchor` is for making `constraints` between 2 views. If you want to make `constraints` for multiple views at once, you can use multiple `Anchor`. There are some tasks that you do often, let `Builder` help you. These method below use `Builder` under the hood
+
 **Anchors** has a set of builders to help you avoid repetitive tasks and build UIs quickly 😎
 
 #### Apply
