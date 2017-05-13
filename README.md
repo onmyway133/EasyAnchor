@@ -9,15 +9,49 @@
 
 ![](Screenshots/Artboard.png)
 
-## Description
+## Story
 
-**Anchors** description.
+I like to build view in code, so Auto Layout is my definite choice. The syntax has improved over the years, but I always want to do it with minimum effort. More repetitive code makes you tend to do copy paste and produce more bugs.
 
-## Usage
+### Auto Layout APIs history
 
-```swift
-<API>
-```
+How new APIs were introduced over the years, so you know to set your deployment target
+
+- `NSLayoutConstraint` since iOS 6, macOS 10.7
+- `isActive` since iOS 8, macOS 10.10
+- `NSLayoutAnchor`, `UI|NSLayoutGuide` since iOS 9, macOS 10.11
+
+### Do you need a another Auto Layout framework?
+
+All the Auto Layout frameworks you see are just convenient ways to build `NSLayoutConstraint`, in fact these are what you normally need
+
+- Call `addSubview` so that view is in hierarchy
+- Set `translatesAutoresizingMaskIntoConstraints = false`
+- Set `isActive = true` to enable constraints
+
+**Anchors** can do much more for you
+
+## Features
+
+- [x] Fluent builder syntax
+- [x] Easy to customize with protocol based
+- [x] Support iOS 9+, macOS 10.11+
+- [x] Update and reset constraints
+- [x] Find existing constraints
+- [ ] Debug constraints
+- [ ] Visualize constraints
+
+## Basic with Anchor
+
+## Animation
+
+## Update constraints with Group
+
+## Find existing constraints
+
+## Customize with ConstraintProducer
+
+## Build quickly with Builder 
 
 ## Installation
 
