@@ -20,8 +20,9 @@ public extension Anchor {
 
   /// Distribute views horizontally
   func distributeHorizontally(togetherWith views: [UIView], spacing: CGFloat) -> Builder.HorizontalDistribute {
-    var views: [UIView] = views
-    views.append(contentsOf: [item as? UIView].flatMap({ $0 }))
-    return Builder.HorizontalDistribute(views: views, spacing: spacing)
+    var array: [UIView] = []
+    array.append(contentsOf: [item as? UIView].flatMap({ $0 }))
+    array.append(contentsOf: views)
+    return Builder.HorizontalDistribute(views: array, spacing: spacing)
   }
 }

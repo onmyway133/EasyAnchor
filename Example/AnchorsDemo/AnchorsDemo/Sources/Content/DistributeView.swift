@@ -20,10 +20,8 @@ class DistributeView: UIView {
     activate(
       container.anchor.edges.insets(8),
       a.anchor.left.top.bottom,
-      a.anchor.width.equal.to(40),
-      a.anchor.width.apply(to: [b, c]),
-      b.anchor.top.bottom,
-      c.anchor.right.top.bottom,
+      c.anchor.right,
+      a.anchor.top.bottom.width.apply(to: [b, c]),
       a.anchor.distributeHorizontally(togetherWith: [b, c], spacing: 50)
     )
 
