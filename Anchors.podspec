@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Anchors"
-  s.summary          = "A short description of Anchors."
+  s.summary          = "Declarative, extensible, powerful Auto Layout for iOS and macOS"
   s.version          = "1.0.0"
   s.homepage         = "https://github.com/onmyway133/Anchors"
   s.license          = 'MIT'
