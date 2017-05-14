@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "Anchors"
   s.summary          = "A short description of Anchors."
-  s.version          = "0.1.0"
+  s.version          = "1.0.0"
   s.homepage         = "https://github.com/onmyway133/Anchors"
   s.license          = 'MIT'
   s.author           = { "Khoa Pham" => "onmyway133@gmail.com" }
