@@ -43,9 +43,13 @@ All the Auto Layout frameworks you see are just convenient ways to build `NSLayo
 - Set `translatesAutoresizingMaskIntoConstraints = false`
 - Set `isActive = true` to enable constraints
 
-Most of the time, `NSLayoutAnchor` is what you need. But if you need more, **Anchors** can be your choice. This is how to make a piano using **Anchors**
+Most of the time, `NSLayoutAnchor` is what you need. But if you need more, **Anchors** can be your choice.
 
-More example can be found in [Example](https://github.com/onmyway133/Anchors/tree/master/Example/AnchorsDemo)
+### Examples
+
+#### Piano
+
+This is how to make a piano using `apply` and `fixed spacing`. See [code](https://github.com/onmyway133/Anchors/tree/master/Example/AnchorsDemo/Content/PianoView.swift)
 
 <div align = "center">
 <img src="Screenshots/piano.png" width="400" height="200" />
@@ -72,6 +76,38 @@ activate(
 )
 ```
 
+#### Tetris
+
+Well, you can use Auto Layout to make `Tetris`. Auto Layout plays well with `affine transform` too. See [code](https://github.com/onmyway133/Anchors/tree/master/Example/AnchorsDemo/Content/TetrisView.swift)
+
+<div align = "center">
+<img src="Screenshots/tetris.gif" width="400" height="590" />
+<br />
+<br />
+<br />
+</div>
+
+```swift
+activate(
+  lineBlock.anchor.left.bottom
+)
+
+// later
+activate(
+  firstSquareBlock.anchor.left.equal.to(lineBlock.anchor.right),
+  firstSquareBlock.anchor.bottom
+)
+
+// later
+activate(
+  secondSquareBlock.anchor.right.bottom
+)
+```
+
+#### More
+
+More example can be found in [Example](https://github.com/onmyway133/Anchors/tree/master/Example/AnchorsDemo)
+
 ## Features
 
 - [x] Fluent builder syntax
@@ -82,6 +118,8 @@ activate(
 - [x] Find existing constraints
 - [ ] Debug constraints
 - [ ] Visualize constraints
+- [ ] Android LinearLayout style
+- [ ] Flexbox inspired style
 
 ## Basic with Anchor
 
