@@ -47,6 +47,34 @@ Most of the time, `NSLayoutAnchor` is what you need. But if you need more, **Anc
 
 ### Examples
 
+#### Tetris
+
+Well, you can use Auto Layout to make `Tetris`. Auto Layout plays well with `affine transform` too. See [code](https://github.com/onmyway133/Anchors/tree/master/Example/AnchorsDemo/Content/TetrisView.swift)
+
+<div align = "center">
+<img src="Screenshots/tetris.gif" width="400" height="590" />
+<br />
+<br />
+<br />
+</div>
+
+```swift
+activate(
+  lineBlock.anchor.left.bottom
+)
+
+// later
+activate(
+  firstSquareBlock.anchor.left.equal.to(lineBlock.anchor.right),
+  firstSquareBlock.anchor.bottom
+)
+
+// later
+activate(
+  secondSquareBlock.anchor.right.bottom
+)
+```
+
 #### Piano
 
 This is how to make a piano using `apply` and `fixed spacing`. See [code](https://github.com/onmyway133/Anchors/tree/master/Example/AnchorsDemo/Content/PianoView.swift)
@@ -73,34 +101,6 @@ activate(
   fg.anchor.centerX.equal.to(f.anchor.right),
   ga.anchor.centerX.equal.to(g.anchor.right),
   ab.anchor.centerX.equal.to(a.anchor.right)
-)
-```
-
-#### Tetris
-
-Well, you can use Auto Layout to make `Tetris`. Auto Layout plays well with `affine transform` too. See [code](https://github.com/onmyway133/Anchors/tree/master/Example/AnchorsDemo/Content/TetrisView.swift)
-
-<div align = "center">
-<img src="Screenshots/tetris.gif" width="400" height="590" />
-<br />
-<br />
-<br />
-</div>
-
-```swift
-activate(
-  lineBlock.anchor.left.bottom
-)
-
-// later
-activate(
-  firstSquareBlock.anchor.left.equal.to(lineBlock.anchor.right),
-  firstSquareBlock.anchor.bottom
-)
-
-// later
-activate(
-  secondSquareBlock.anchor.right.bottom
 )
 ```
 
