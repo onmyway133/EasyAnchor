@@ -10,6 +10,8 @@
 		8BE492621400AE9ACA47760D /* Pods_AnchorsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855ABCE79AE8025BDA3D5B66 /* Pods_AnchorsDemo.framework */; };
 		D22D006F1EC3CA26000C9B4B /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D006E1EC3CA26000C9B4B /* PianoView.swift */; };
 		D22D00711EC43BCC000C9B4B /* FindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D00701EC43BCC000C9B4B /* FindView.swift */; };
+		D2B5CBC51ECB5A15003F9D5F /* TetrisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5CBC41ECB5A15003F9D5F /* TetrisView.swift */; };
+		D2B5CBC71ECB5A4B003F9D5F /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5CBC61ECB5A4B003F9D5F /* Image+Extensions.swift */; };
 		D2D43D2C1EC733D400065343 /* DynamicSpacingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D2B1EC733D400065343 /* DynamicSpacingView.swift */; };
 		D2EC2AD71EC2663300818824 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EC2AD61EC2663300818824 /* GroupView.swift */; };
 		D2EC2AD91EC2EB3D00818824 /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EC2AD81EC2EB3D00818824 /* PagingView.swift */; };
@@ -32,6 +34,8 @@
 		CE78087575E54F7C69FAAE57 /* Pods-AnchorsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnchorsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnchorsDemo/Pods-AnchorsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D22D006E1EC3CA26000C9B4B /* PianoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
 		D22D00701EC43BCC000C9B4B /* FindView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindView.swift; sourceTree = "<group>"; };
+		D2B5CBC41ECB5A15003F9D5F /* TetrisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetrisView.swift; sourceTree = "<group>"; };
+		D2B5CBC61ECB5A4B003F9D5F /* Image+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		D2D43D2B1EC733D400065343 /* DynamicSpacingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicSpacingView.swift; sourceTree = "<group>"; };
 		D2EC2AD61EC2663300818824 /* GroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		D2EC2AD81EC2EB3D00818824 /* PagingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 				D22D006E1EC3CA26000C9B4B /* PianoView.swift */,
 				D22D00701EC43BCC000C9B4B /* FindView.swift */,
 				D2D43D2B1EC733D400065343 /* DynamicSpacingView.swift */,
+				D2B5CBC41ECB5A15003F9D5F /* TetrisView.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				D2F713051EC1170100CE2CE0 /* ContentController.swift */,
 				D2F7130D1EC1252800CE2CE0 /* Animator.swift */,
 				D2F7130F1EC1268C00CE2CE0 /* Color.swift */,
+				D2B5CBC61ECB5A4B003F9D5F /* Image+Extensions.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -284,11 +290,13 @@
 				D2F713081EC117A700CE2CE0 /* ApplyView.swift in Sources */,
 				D2EC2ADB1EC2EB4300818824 /* FiedSpacingView.swift in Sources */,
 				D2EC2AD71EC2663300818824 /* GroupView.swift in Sources */,
+				D2B5CBC51ECB5A15003F9D5F /* TetrisView.swift in Sources */,
 				D2F713101EC1268C00CE2CE0 /* Color.swift in Sources */,
 				D2D43D2C1EC733D400065343 /* DynamicSpacingView.swift in Sources */,
 				D2F7130E1EC1252800CE2CE0 /* Animator.swift in Sources */,
 				D2EC2AD91EC2EB3D00818824 /* PagingView.swift in Sources */,
 				D2F713031EC115C800CE2CE0 /* View.swift in Sources */,
+				D2B5CBC71ECB5A4B003F9D5F /* Image+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

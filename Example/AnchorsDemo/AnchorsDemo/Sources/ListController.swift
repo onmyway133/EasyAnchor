@@ -15,7 +15,8 @@ class ListController: UITableViewController {
     Content(title: "Fixed Spacing", view: FixedSpacingView.self),
     Content(title: "Dynamic Spacing", view: DynamicSpacingView.self),
     Content(title: "Piano", view: PianoView.self),
-    Content(title: "Find", view: FindView.self)
+    Content(title: "Find", view: FindView.self),
+    Content(title: "Tetris", view: TetrisView.self)
   ]
 
   override func viewDidLoad() {

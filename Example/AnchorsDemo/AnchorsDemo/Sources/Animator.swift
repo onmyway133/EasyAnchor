@@ -6,6 +6,10 @@ class Animator {
   private let view: UIView
   private let animations: [Animation]
   private var index = 0
+  var repeats = true
+  var animatorGenerator: () -> UIViewPropertyAnimator = {
+    return UIViewPropertyAnimator(duration: 1, dampingRatio: 0.7)
+  }
 
   init(view: UIView, animations: [Animation]) {
     self.animations = animations
@@ -19,10 +23,14 @@ class Animator {
   }
 
   private func animate() {
+    if !repeats && index == animations.count - 1 {
+      return
+    }
+
     let animation = animations[index % animations.count]
     animation()
 
-    let animator = UIViewPropertyAnimator(duration: 1, dampingRatio: 0.7)
+    let animator = animatorGenerator()
     animator.addAnimations { [weak self] in
       self?.view.layoutIfNeeded()
     }
