@@ -23,7 +23,7 @@ class Animator {
   }
 
   private func animate() {
-    if !repeats && index == animations.count - 1 {
+    if !repeats && index == animations.count {
       return
     }
 
