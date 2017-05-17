@@ -112,7 +112,7 @@ More example can be found in [Example](https://github.com/onmyway133/Anchors/tre
 
 - [x] Fluent builder syntax
 - [x] Easy to customize with protocol based
-- [x] Support iOS 9+, macOS 10.11+
+- [x] Support iOS 8+, macOS 10.10+
 - [x] Support `LayoutGuide`
 - [x] Update and reset constraints
 - [x] Find existing constraints
@@ -244,6 +244,18 @@ c.anchor.width.constant(20)  // width==20
 
 ```swift
 a.anchor.height.equal.to(a.anchor.width)  // height==width
+```
+
+Alternatively, you can just use `ratio`
+
+```swift
+a.anchor.width.constant(10)
+a.anchor.height.ratio(2) // height==width*2
+```
+
+```swift
+a.anchor.height.constant(10)
+a.anchor.width.ratio(2) // width==height*2
 ```
 
 ## Inference
