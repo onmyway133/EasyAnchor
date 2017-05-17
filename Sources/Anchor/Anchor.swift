@@ -40,7 +40,7 @@ public class Anchor: ConstraintProducer {
   }
 
   /// Init with Layout Guide
-  @available(iOS 9, *)
+  @available(iOS 9.0, macOS 10.11, *)
   convenience init(layoutGuide: LayoutGuide) {
     self.init(item: layoutGuide)
   }
