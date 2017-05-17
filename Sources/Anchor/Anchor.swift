@@ -35,13 +35,18 @@ public class Anchor: ConstraintProducer {
   var toValue: To = .none
 
   /// Init with View
-  init(view: View) {
-    self.item = view
+  convenience init(view: View) {
+    self.init(item: view)
   }
 
   /// Init with Layout Guide
   @available(iOS 9, *)
-  init(layoutGuide: LayoutGuide) {
-    self.item = layoutGuide
+  convenience init(layoutGuide: LayoutGuide) {
+    self.init(item: layoutGuide)
+  }
+
+  // Init with Item
+  init(item: AnyObject) {
+    self.item = item
   }
 }

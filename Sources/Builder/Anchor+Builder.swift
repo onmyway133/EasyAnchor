@@ -10,6 +10,11 @@ public final class Builder {}
 /// Extend Anchor to return builders
 public extension Anchor {
 
+  /// Add a ratio between width and height
+  func ratio(_ value: CGFloat) -> Builder.Ratio {
+    return Builder.Ratio(anchor: self, ratio: value)
+  }
+
   /// Apply the same anchor to other views
   func apply(to views: [View]) -> Builder.Apply {
     return Builder.Apply(anchor: self, views: views)

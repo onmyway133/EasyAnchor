@@ -136,6 +136,21 @@ class Tests: XCTestCase {
       $0.firstAttribute == .height && $0.multiplier == 1.5 }))
   }
 
+  func testRatio2() {
+    let view = View()
+    let constraints = view.anchor.width.equal.to(10).constraints()
+      + view.anchor.height.ratio(1.5).constraints()
+
+    XCTAssertEqual(constraints.count, 2)
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .width && $0.constant == 10 }))
+
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .height && $0.constant == 0 }))
+    XCTAssertTrue(constraints.contains(where: {
+      $0.firstAttribute == .height && $0.multiplier == 1.5 }))
+  }
+
   func testActivate() {
     let superview = View(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
     let view = View()
