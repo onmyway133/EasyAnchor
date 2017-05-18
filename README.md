@@ -49,7 +49,7 @@ Most of the time, `NSLayoutAnchor` is what you need. But if you need more, **Anc
 
 #### Tetris
 
-Well, you can use Auto Layout to make `Tetris`. Auto Layout plays well with `affine transform` too. See [code](https://github.com/onmyway133/Anchors/tree/master/Example/AnchorsDemo/Content/TetrisView.swift)
+Well, you can use Auto Layout to make `Tetris`. Auto Layout plays well with `affine transform` too. See [code](https://github.com/onmyway133/Anchors/blob/master/Example/AnchorsDemo/AnchorsDemo/Sources/Content/TetrisView.swift)
 
 <div align = "center">
 <img src="Screenshots/tetris.gif" width="400" height="590" />
@@ -77,7 +77,7 @@ activate(
 
 #### Piano
 
-This is how to make a piano using `apply` and `fixed spacing`. See [code](https://github.com/onmyway133/Anchors/tree/master/Example/AnchorsDemo/Content/PianoView.swift)
+This is how to make a piano using `apply` and `fixed spacing`. See [code](https://github.com/onmyway133/Anchors/blob/master/Example/AnchorsDemo/AnchorsDemo/Sources/Content/PianoView.swift)
 
 <div align = "center">
 <img src="Screenshots/piano.png" width="400" height="200" />
