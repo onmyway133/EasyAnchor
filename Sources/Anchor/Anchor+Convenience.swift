@@ -31,14 +31,22 @@ public extension Anchor {
   }
 
   func paddingHorizontally(_ value: CGFloat) -> Anchor {
-    updateIfAny(.leading, value)
-    updateIfAny(.trailing, -value)
+    removeIfAny(.leading)
+    removeIfAny(.trailing)
+
+    pins.append(Pin(.leading, constant: value))
+    pins.append(Pin(.trailing, constant: -value))
+
     return self
   }
 
   func paddingVertically(_ value: CGFloat) -> Anchor {
-    updateIfAny(.top, value)
-    updateIfAny(.bottom, -value)
+    removeIfAny(.top)
+    removeIfAny(.bottom)
+
+    pins.append(Pin(.top, constant: value))
+    pins.append(Pin(.bottom, constant: -value))
+
     return self
   }
 }

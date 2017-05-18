@@ -13,4 +13,10 @@ extension Anchor {
   func exists(_ attribute: NSLayoutAttribute) -> Bool {
     return pins.index(where: { $0.attribute == attribute }) != nil
   }
+
+  func removeIfAny(_ attribute: NSLayoutAttribute) {
+    if let index = pins.index(where: { $0.attribute == attribute }) {
+      pins.remove(at: index)
+    }
+  }
 }
