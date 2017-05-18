@@ -234,10 +234,10 @@ a.anchor.height.equal.to(20)  // height==20
 b.anchor.size.equal.to(20)  // width==20, height==20
 ```
 
-Alernatively, you can just use constant
+You can't just use `constant` because **Anchors** will infer to the superview
 
 ```swift
-c.anchor.width.constant(20)  // width==20
+c.anchor.width.constant(20)  // width==superview.width+20
 ```
 
 #### Ratio
