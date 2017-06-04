@@ -23,6 +23,16 @@
 - [Debug Auto Layout](#debug-auto-layout)
 - [Support multiple screen sizes](#support-multiple-screen-sizes)
 
+<div align = "center">
+<img src="Screenshots/basic.gif" width="85" height="85" />
+<img src="Screenshots/find.gif" width="85" height="85" />
+<img src="Screenshots/group.gif" width="85" height="85" />
+<img src="Screenshots/apply.gif" width="85" height="85" />
+<img src="Screenshots/paging.gif" width="85" height="85" />
+<img src="Screenshots/fixed_spacing.gif" width="85" height="85" />
+<img src="Screenshots/dynamic_spacing.gif" width="85" height="85" />
+</div>
+
 ## Story
 
 I like to build view in code, so Auto Layout is my definite choice. The syntax has improved over the years, but I always want to do it with minimum effort. More repetitive code makes you tend to do copy paste and produce more bugs.
@@ -52,7 +62,7 @@ Most of the time, `NSLayoutAnchor` is what you need. But if you need more, **Anc
 Well, you can use Auto Layout to make `Tetris`. Auto Layout plays well with `affine transform` too. See [code](https://github.com/onmyway133/Anchors/blob/master/Example/AnchorsDemo/AnchorsDemo/Sources/Content/TetrisView.swift)
 
 <div align = "center">
-<img src="Screenshots/tetris.gif" width="400" height="590" />
+<img src="Screenshots/tetris.gif" width="200" height="295" />
 <br />
 <br />
 <br />
@@ -80,7 +90,7 @@ activate(
 This is how to make a piano using `apply` and `fixed spacing`. See [code](https://github.com/onmyway133/Anchors/blob/master/Example/AnchorsDemo/AnchorsDemo/Sources/Content/PianoView.swift)
 
 <div align = "center">
-<img src="Screenshots/piano.png" width="400" height="200" />
+<img src="Screenshots/piano.png" width="300" height="150" />
 </div>
 
 ```swift
@@ -118,8 +128,6 @@ More example can be found in [Example](https://github.com/onmyway133/Anchors/tre
 - [x] Find existing constraints
 - [ ] Debug constraints
 - [ ] Visualize constraints
-- [ ] Android LinearLayout style
-- [ ] Flexbox inspired style
 
 ## Basic with Anchor
 
