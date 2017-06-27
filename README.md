@@ -133,7 +133,7 @@ More example can be found in [Example](https://github.com/onmyway133/Anchors/tre
 
 #### Access Anchor
 
-Prefer composition over extension, this is how you access `anchor`
+Prefer composition over extension, this is how you access `anchor`. Support `View`, `LayoutGuide`, `LayoutSupport`
 
 ```swift
 let view = UIView()
@@ -141,6 +141,9 @@ view.anchor.left.right
 
 let guide = UILayoutGuide()
 guide.anchor.width.height
+
+topLayoutGuide.anchor.bottom
+bottomLayoutGuide.anchor.top
 ```
 
 #### Activate constraints
