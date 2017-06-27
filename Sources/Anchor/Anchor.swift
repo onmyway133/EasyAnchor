@@ -46,7 +46,7 @@ public class Anchor: ConstraintProducer {
   }
 
   // Init with Item
-  init(item: AnyObject) {
+  public init(item: AnyObject) {
     self.item = item
   }
 }
