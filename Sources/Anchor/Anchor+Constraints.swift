@@ -13,7 +13,11 @@ public extension Anchor {
       }
 
       if let priorityValue = priorityValue {
-        $0.priority = priorityValue
+        #if os(iOS) || os(tvOS)
+          $0.priority = UILayoutPriority(rawValue: priorityValue)
+        #elseif os(OSX)
+          $0.priority = NSLayoutPriority(priorityValue)
+        #endif
       }
 
       ($0.firstItem as? View)?.translatesAutoresizingMaskIntoConstraints = false
