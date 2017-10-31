@@ -61,7 +61,6 @@ public extension Anchor {
     return self
   }
 
-  @available(iOS 9.0, macOS 10.11, *)
   var firstBaseline: Anchor {
     pins.append(Pin(.firstBaseline))
     return self

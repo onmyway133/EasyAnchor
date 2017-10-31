@@ -6,7 +6,6 @@
 
 public extension Builder {
 
-  @available(iOS 9.0, macOS 10.11, *)
   public class DynamicSpacingHorizontally: ConstraintProducer {
 
     let views: [View]

@@ -5,16 +5,16 @@
 #endif
 
 extension Anchor {
-  func updateIfAny(_ attribute: NSLayoutAttribute, _ constant: CGFloat) {
+  func updateIfAny(_ attribute: Attribute, _ constant: CGFloat) {
     let pin = pins.filter({ $0.attribute == attribute }).first
     pin?.constant = constant
   }
 
-  func exists(_ attribute: NSLayoutAttribute) -> Bool {
+  func exists(_ attribute: Attribute) -> Bool {
     return pins.index(where: { $0.attribute == attribute }) != nil
   }
 
-  func removeIfAny(_ attribute: NSLayoutAttribute) {
+  func removeIfAny(_ attribute: Attribute) {
     if let index = pins.index(where: { $0.attribute == attribute }) {
       pins.remove(at: index)
     }

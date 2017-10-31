@@ -2,17 +2,14 @@
   import UIKit
   public typealias View = UIView
   public typealias EdgeInsets = UIEdgeInsets
+  public typealias LayoutGuide = UILayoutGuide
+  public typealias Relation = NSLayoutRelation
+  public typealias Attribute = NSLayoutAttribute
 #elseif os(OSX)
   import AppKit
   public typealias View = NSView
-#endif
-
-#if os(iOS) || os(tvOS)
-  import UIKit
-  @available(iOS 9.0, *)
-  public typealias LayoutGuide = UILayoutGuide
-#elseif os(OSX)
-  import AppKit
-  @available(macOS 10.11, *)
   public typealias LayoutGuide = NSLayoutGuide
+  public typealias EdgeInsets = NSEdgeInsets
+  public typealias Relation = NSLayoutConstraint.Relation
+  public typealias Attribute = NSLayoutConstraint.Attribute
 #endif

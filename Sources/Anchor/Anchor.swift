@@ -12,10 +12,10 @@ public class Anchor: ConstraintProducer {
   }
 
   class Pin {
-    let attribute: NSLayoutAttribute
+    let attribute: Attribute
     var constant: CGFloat
 
-    init(_ attribute: NSLayoutAttribute, constant: CGFloat = 0) {
+    init(_ attribute:  Attribute, constant: CGFloat = 0) {
       self.attribute = attribute
       self.constant = constant
     }
@@ -31,7 +31,7 @@ public class Anchor: ConstraintProducer {
   var priorityValue: Float?
   var identifierValue: String?
   var referenceBlock: (([NSLayoutConstraint]) -> Void)?
-  var relationValue: NSLayoutRelation = .equal
+  var relationValue: Relation = .equal
   var toValue: To = .none
 
   /// Init with View
@@ -40,7 +40,6 @@ public class Anchor: ConstraintProducer {
   }
 
   /// Init with Layout Guide
-  @available(iOS 9.0, macOS 10.11, *)
   convenience init(layoutGuide: LayoutGuide) {
     self.init(item: layoutGuide)
   }

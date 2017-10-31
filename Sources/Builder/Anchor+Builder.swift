@@ -39,7 +39,6 @@ public extension Anchor {
   }
 
   /// Add dynamic spacing using LayoutGuide. The spacing will resize
-  @available(iOS 9.0, macOS 10.11, *)
   func dynamicSpacingHorizontally(togetherWith views: [View]) -> Builder.DynamicSpacingHorizontally {
     var array: [View] = []
     array.append(contentsOf: [item as? View].flatMap({ $0 }))

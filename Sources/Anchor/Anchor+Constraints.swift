@@ -16,7 +16,7 @@ public extension Anchor {
         #if os(iOS) || os(tvOS)
           $0.priority = UILayoutPriority(rawValue: priorityValue)
         #elseif os(OSX)
-          $0.priority = NSLayoutPriority(priorityValue)
+          $0.priority =  NSLayoutConstraint.Priority(priorityValue)
         #endif
       }
 
