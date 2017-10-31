@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "Anchors"
   s.summary          = "Declarative, extensible, powerful Auto Layout for iOS and macOS"
-  s.version          = "1.2.0"
+  s.version          = "2.0.0"
   s.homepage         = "https://github.com/onmyway133/Anchors"
   s.license          = 'MIT'
   s.author           = { "Khoa Pham" => "onmyway133@gmail.com" }
@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   }
   s.social_media_url = 'https://twitter.com/onmyway133'
 
-  s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.10'
+  s.ios.deployment_target = '9.0'
+  s.osx.deployment_target = '10.11'
   s.tvos.deployment_target = '9.2'
 
   s.requires_arc = true
@@ -21,5 +21,5 @@ Pod::Spec.new do |s|
   s.ios.frameworks = 'UIKit', 'Foundation'
   s.osx.frameworks = 'Cocoa', 'Foundation'
 
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 end
