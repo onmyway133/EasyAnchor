@@ -121,7 +121,7 @@ More example can be found in [Example](https://github.com/onmyway133/Anchors/tre
 
 - [x] Fluent builder syntax
 - [x] Easy to customize with protocol based
-- [x] Support iOS 8+, macOS 10.10+
+- [x] Support iOS, macOS
 - [x] Support `LayoutGuide`
 - [x] Update and reset constraints
 - [x] Find existing constraints
