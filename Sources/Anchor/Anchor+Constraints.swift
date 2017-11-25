@@ -40,6 +40,8 @@ fileprivate extension Anchor {
     case .none:
       if let superview = (item as? View)?.superview {
         return output(anchor: Anchor(view: superview))
+      } else if let owningView = (item as? LayoutGuide)?.owningView {
+        return output(anchor: Anchor(view: owningView))
       } else {
         return []
       }
@@ -52,13 +54,16 @@ fileprivate extension Anchor {
         return $0.attribute == .width || $0.attribute == .height
       })
       .map({
-        let constraint = NSLayoutConstraint(item: item,
-                                            attribute: $0.attribute,
-                                            relatedBy: relationValue,
-                                            toItem: nil,
-                                            attribute: .notAnAttribute,
-                                            multiplier: multiplierValue,
-                                            constant: $0.constant)
+        let constraint = NSLayoutConstraint(
+          item: item,
+          attribute: $0.attribute,
+          relatedBy: relationValue,
+          toItem: nil,
+          attribute: .notAnAttribute,
+          multiplier: multiplierValue,
+          constant: $0.constant
+        )
+
         return constraint
       })
   }
@@ -68,13 +73,16 @@ fileprivate extension Anchor {
     let pairs = zip(pins, anotherPins)
 
     return pairs.map({ pin, anotherPin in
-      let constraint = NSLayoutConstraint(item: item,
-                                          attribute: pin.attribute,
-                                          relatedBy: relationValue,
-                                          toItem: anotherAnchor.item,
-                                          attribute: anotherPin.attribute,
-                                          multiplier: multiplierValue,
-                                          constant: pin.constant)
+      let constraint = NSLayoutConstraint(
+        item: item,
+        attribute: pin.attribute,
+        relatedBy: relationValue,
+        toItem: anotherAnchor.item,
+        attribute: anotherPin.attribute,
+        multiplier: multiplierValue,
+        constant: pin.constant
+      )
+
       return constraint
     })
   }
