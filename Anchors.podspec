@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "Anchors"
   s.summary          = "Declarative, extensible, powerful Auto Layout for iOS and macOS"
-  s.version          = "2.2.0"
+  s.version          = "2.2.1"
   s.homepage         = "https://github.com/onmyway133/Anchors"
   s.license          = 'MIT'
   s.author           = { "Khoa Pham" => "onmyway133@gmail.com" }
