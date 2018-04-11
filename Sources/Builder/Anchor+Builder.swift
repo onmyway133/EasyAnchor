@@ -24,7 +24,7 @@ public extension Anchor {
   /// Build a paging scrollView horizontally
   func pagingHorizontally(togetherWith views: [View], in scrollView: UIScrollView) -> Builder.PagingHorizontally {
     var array: [View] = []
-    array.append(contentsOf: [item as? View].flatMap({ $0 }))
+    array.append(contentsOf: [item as? View].compactMap({ $0 }))
     array.append(contentsOf: views)
     return Builder.PagingHorizontally(scrollView: scrollView, views: array)
   }
@@ -33,7 +33,7 @@ public extension Anchor {
   /// Add fixed spacing. The views will resize
   func fixedSpacingHorizontally(togetherWith views: [View], spacing: CGFloat) -> Builder.FixedSpacingHorizontally {
     var array: [View] = []
-    array.append(contentsOf: [item as? View].flatMap({ $0 }))
+    array.append(contentsOf: [item as? View].compactMap({ $0 }))
     array.append(contentsOf: views)
     return Builder.FixedSpacingHorizontally(views: array, spacing: spacing)
   }
@@ -41,7 +41,7 @@ public extension Anchor {
   /// Add dynamic spacing using LayoutGuide. The spacing will resize
   func dynamicSpacingHorizontally(togetherWith views: [View]) -> Builder.DynamicSpacingHorizontally {
     var array: [View] = []
-    array.append(contentsOf: [item as? View].flatMap({ $0 }))
+    array.append(contentsOf: [item as? View].compactMap({ $0 }))
     array.append(contentsOf: views)
     return Builder.DynamicSpacingHorizontally(views: array)
   }
