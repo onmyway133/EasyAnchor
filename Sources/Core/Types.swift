@@ -3,8 +3,8 @@
   public typealias View = UIView
   public typealias EdgeInsets = UIEdgeInsets
   public typealias LayoutGuide = UILayoutGuide
-  public typealias Relation = NSLayoutRelation
-  public typealias Attribute = NSLayoutAttribute
+  public typealias Relation = NSLayoutConstraint.Relation
+  public typealias Attribute = NSLayoutConstraint.Attribute
 #elseif os(OSX)
   import AppKit
   public typealias View = NSView
