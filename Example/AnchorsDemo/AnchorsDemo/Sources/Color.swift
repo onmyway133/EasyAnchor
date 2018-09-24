@@ -1,5 +1,4 @@
 import UIKit
-import Hue
 
 struct Color {
   static let container = UIColor(hex: "81CFE0")

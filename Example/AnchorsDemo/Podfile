@@ -4,6 +4,5 @@ platform :ios, '9.0'
 
 target 'AnchorsDemo' do
  pod 'Anchors', path: '../../'
- pod 'Hue'
 end
 
