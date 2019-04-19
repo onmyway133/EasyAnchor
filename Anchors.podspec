@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "Anchors"
   s.summary          = "Declarative, extensible, powerful Auto Layout for iOS and macOS"
-  s.version          = "2.4.0"
+  s.version          = "2.5.0"
   s.homepage         = "https://github.com/onmyway133/Anchors"
   s.license          = 'MIT'
   s.author           = { "Khoa Pham" => "onmyway133@gmail.com" }
@@ -21,5 +21,5 @@ Pod::Spec.new do |s|
   s.ios.frameworks = 'UIKit', 'Foundation'
   s.osx.frameworks = 'Cocoa', 'Foundation'
 
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
+  s.swift_version = '5.0'
 end

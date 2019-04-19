@@ -103,6 +103,8 @@
 		D23B9F251FA90E94008363A1 /* Anchors_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Anchors_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23B9F271FA90E94008363A1 /* Anchors_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Anchors_tvOS.h; sourceTree = "<group>"; };
 		D23B9F281FA90E94008363A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D25EE5FB226A57EE0040D686 /* Anchors.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Anchors.podspec; sourceTree = "<group>"; };
+		D25EE5FC226A57EE0040D686 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D2873DAF1F030CB4004F4396 /* LayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		D296834E1EBD19BE001E62CB /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		D296835D1EBDBA37001E62CB /* TestCase+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestCase+Extensions.swift"; sourceTree = "<group>"; };
@@ -249,6 +251,8 @@
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
+				D25EE5FB226A57EE0040D686 /* Anchors.podspec */,
+				D25EE5FC226A57EE0040D686 /* README.md */,
 				D500FD111C3AABED00782D78 /* Playground-iOS.playground */,
 				D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */,
 				D5C629691C3A809D007F7B7C /* Sources */,
@@ -458,6 +462,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = D5B2E8951C3A780C00C0327D;
