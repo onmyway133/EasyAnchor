@@ -1,5 +1,5 @@
 PODS:
-  - Anchors (2.4.0)
+  - Anchors (2.5.0)
 
 DEPENDENCIES:
   - Anchors (from `../../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  Anchors: 79dc9832b59eff6cc4fa75cdae51a50673623c3a
+  Anchors: c039992ebab2fa53deccac429031a46debfbdc5a
 
 PODFILE CHECKSUM: 0399e52dff20cee1f5f9b1009adeb07b7e6d8fa3
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.7.0.beta.3
