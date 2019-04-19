@@ -11,11 +11,11 @@ extension Anchor {
   }
 
   func exists(_ attribute: Attribute) -> Bool {
-    return pins.index(where: { $0.attribute == attribute }) != nil
+    return pins.firstIndex(where: { $0.attribute == attribute }) != nil
   }
 
   func removeIfAny(_ attribute: Attribute) {
-    if let index = pins.index(where: { $0.attribute == attribute }) {
+    if let index = pins.firstIndex(where: { $0.attribute == attribute }) {
       pins.remove(at: index)
     }
   }

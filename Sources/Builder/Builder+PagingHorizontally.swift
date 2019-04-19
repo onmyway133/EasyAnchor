@@ -3,11 +3,11 @@ import UIKit
 
 
 public extension Builder {
-  public class PagingHorizontally: ConstraintProducer {
+  class PagingHorizontally: ConstraintProducer {
     let scrollView: UIScrollView
     let views: [View]
 
-    init(scrollView: UIScrollView, views: [View]) {
+    public init(scrollView: UIScrollView, views: [View]) {
       self.scrollView = scrollView
       self.views = views
     }

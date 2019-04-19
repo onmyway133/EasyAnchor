@@ -5,12 +5,12 @@
 #endif
 
 public extension Builder {
-  public class FixedSpacingHorizontally: ConstraintProducer {
+  class FixedSpacingHorizontally: ConstraintProducer {
 
     let views: [View]
     let spacing: CGFloat
 
-    init(views: [View], spacing: CGFloat) {
+    public init(views: [View], spacing: CGFloat) {
       self.views = views
       self.spacing = spacing
     }

@@ -5,12 +5,12 @@
 #endif
 
 public extension Builder {
-  public class Apply: ConstraintProducer {
+  class Apply: ConstraintProducer {
 
     let sourceAnchor: Anchor
     let views: [View]
 
-    init(anchor: Anchor, views: [View]) {
+    public init(anchor: Anchor, views: [View]) {
       self.sourceAnchor = anchor
       self.views = views
     }

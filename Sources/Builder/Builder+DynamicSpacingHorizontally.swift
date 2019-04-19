@@ -6,11 +6,11 @@
 
 public extension Builder {
 
-  public class DynamicSpacingHorizontally: ConstraintProducer {
+  class DynamicSpacingHorizontally: ConstraintProducer {
 
     let views: [View]
 
-    init(views: [View]) {
+    public init(views: [View]) {
       self.views = views
     }
 

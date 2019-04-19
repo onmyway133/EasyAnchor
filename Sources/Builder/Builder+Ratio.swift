@@ -5,12 +5,12 @@
 #endif
 
 public extension Builder {
-  public class Ratio: ConstraintProducer {
+  class Ratio: ConstraintProducer {
 
     let sourceAnchor: Anchor
     let ratio: CGFloat
 
-    init(anchor: Anchor, ratio: CGFloat) {
+    public init(anchor: Anchor, ratio: CGFloat) {
       self.sourceAnchor = anchor
       self.ratio = ratio
     }
