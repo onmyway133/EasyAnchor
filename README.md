@@ -36,6 +36,8 @@
 
 I like to build view in code, so Auto Layout is my definite choice. The syntax has improved over the years, but I always want to do it with minimum effort. More repetitive code makes you tend to do copy paste and produce more bugs.
 
+[How to make Auto Layout more convenient in iOS](https://medium.com/flawless-app-stories/how-to-make-auto-layout-more-convenient-in-ios-df3b42fed37f)
+
 ### Auto Layout APIs history
 
 How new APIs were introduced over the years, so you know to set your deployment target
