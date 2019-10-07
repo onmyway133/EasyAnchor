@@ -109,6 +109,7 @@
 		D296834E1EBD19BE001E62CB /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		D296835D1EBDBA37001E62CB /* TestCase+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestCase+Extensions.swift"; sourceTree = "<group>"; };
 		D2B5CBC81ECCF9E7003F9D5F /* Builder+Ratio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Builder+Ratio.swift"; sourceTree = "<group>"; };
+		D2D04765234B51F00005D09D /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		D2D43D2E1EC7450300065343 /* Anchor+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+Attributes.swift"; sourceTree = "<group>"; };
 		D2D43D2F1EC7450300065343 /* Anchor+Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+Configuration.swift"; sourceTree = "<group>"; };
 		D2D43D301EC7450300065343 /* Anchor+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anchor+Constraints.swift"; sourceTree = "<group>"; };
@@ -251,6 +252,7 @@
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
+				D2D04765234B51F00005D09D /* Package.swift */,
 				D25EE5FB226A57EE0040D686 /* Anchors.podspec */,
 				D25EE5FC226A57EE0040D686 /* README.md */,
 				D500FD111C3AABED00782D78 /* Playground-iOS.playground */,
