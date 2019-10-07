@@ -18,7 +18,8 @@ let package = Package(
     targets: [
         .target(
             name: "Anchors",
-            dependencies: []),
+            path: "Sources"
+        ),
         .testTarget(
             name: "AnchorsTests",
             dependencies: ["Anchors"]),
