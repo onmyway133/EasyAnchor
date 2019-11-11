@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
-  s.name             = "Anchors"
+  s.name             = "EasyAnchor"
   s.summary          = "Declarative, extensible, powerful Auto Layout for iOS and macOS"
-  s.version          = "2.5.0"
-  s.homepage         = "https://github.com/onmyway133/Anchors"
+  s.version          = "3.0.0"
+  s.homepage         = "https://github.com/onmyway133/EasyAnchor"
   s.license          = 'MIT'
   s.author           = { "Khoa Pham" => "onmyway133@gmail.com" }
   s.source           = {
-    :git => "https://github.com/onmyway133/Anchors.git",
+    :git => "https://github.com/onmyway133/EasyAnchor.git",
     :tag => s.version.to_s
   }
   s.social_media_url = 'https://twitter.com/onmyway133'

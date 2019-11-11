@@ -1,9 +1,9 @@
-# Anchors
+# EasyAnchor
 
-[![Version](https://img.shields.io/cocoapods/v/Anchors.svg?style=flat)](http://cocoadocs.org/docsets/Anchors)
+[![Version](https://img.shields.io/cocoapods/v/EasyAnchor.svg?style=flat)](http://cocoadocs.org/docsets/EasyAnchor)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![License](https://img.shields.io/cocoapods/l/Anchors.svg?style=flat)](http://cocoadocs.org/docsets/Anchors)
-[![Platform](https://img.shields.io/cocoapods/p/Anchors.svg?style=flat)](http://cocoadocs.org/docsets/Anchors)
+[![License](https://img.shields.io/cocoapods/l/EasyAnchor.svg?style=flat)](http://cocoadocs.org/docsets/EasyAnchor)
+[![Platform](https://img.shields.io/cocoapods/p/EasyAnchor.svg?style=flat)](http://cocoadocs.org/docsets/EasyAnchor)
 ![Swift](https://img.shields.io/badge/%20in-swift%205.0-orange.svg)
 
 ![](Screenshots/Artboard.png)
@@ -54,13 +54,13 @@ All the Auto Layout frameworks you see are just convenient ways to build `NSLayo
 - Set `translatesAutoresizingMaskIntoConstraints = false`
 - Set `isActive = true` to enable constraints
 
-Most of the time, `NSLayoutAnchor` is what you need. But if you need more, **Anchors** can be your choice.
+Most of the time, `NSLayoutAnchor` is what you need. But if you need more, **EasyAnchor** can be your choice.
 
 ### Examples
 
 #### Tetris
 
-Well, you can use Auto Layout to make `Tetris`. Auto Layout plays well with `affine transform` too. See [code](https://github.com/onmyway133/Anchors/blob/master/Example/AnchorsDemo/AnchorsDemo/Sources/Content/TetrisView.swift)
+Well, you can use Auto Layout to make `Tetris`. Auto Layout plays well with `affine transform` too. See [code](https://github.com/onmyway133/EasyAnchor/blob/master/Example/EasyAnchorDemo/EasyAnchorDemo/Sources/Content/TetrisView.swift)
 
 <div align = "center">
 <img src="Screenshots/tetris.gif" width="200" height="295" />
@@ -88,7 +88,7 @@ activate(
 
 #### Piano
 
-This is how to make a piano using `apply` and `fixed spacing`. See [code](https://github.com/onmyway133/Anchors/blob/master/Example/AnchorsDemo/AnchorsDemo/Sources/Content/PianoView.swift)
+This is how to make a piano using `apply` and `fixed spacing`. See [code](https://github.com/onmyway133/EasyAnchor/blob/master/Example/EasyAnchorDemo/EasyAnchorDemo/Sources/Content/PianoView.swift)
 
 <div align = "center">
 <img src="Screenshots/piano.png" width="300" height="150" />
@@ -117,7 +117,7 @@ activate(
 
 #### More
 
-More example can be found in [Example](https://github.com/onmyway133/Anchors/tree/master/Example/AnchorsDemo)
+More example can be found in [Example](https://github.com/onmyway133/EasyAnchor/tree/master/Example/EasyAnchorDemo)
 
 ## Features
 
@@ -246,7 +246,7 @@ a.anchor.height.equal.to(20)  // height==20
 b.anchor.size.equal.to(20)  // width==20, height==20
 ```
 
-You can't just use `constant` because **Anchors** will infer to the superview
+You can't just use `constant` because **EasyAnchor** will infer to the superview
 
 ```swift
 c.anchor.width.constant(20)  // width==superview.width+20
@@ -271,7 +271,7 @@ a.anchor.width.ratio(2) // width==height*2
 ```
 
 ## Inference
-You know what you mostly want to do. So does **Anchors** 🎉. It does its best to infer so don't have to write "obvious" code
+You know what you mostly want to do. So does **EasyAnchor** 🎉. It does its best to infer so don't have to write "obvious" code
 
 #### Most of the time, you want to constraint to the `superview`
 
@@ -377,7 +377,7 @@ public protocol ConstraintProducer {
 }
 ```
 
-For now, there is `Anchor` and `Builder` which conforms to `ConstraintProducer`, you can extend **Anchors** easily by conform to `ConstraintProducer`. For example
+For now, there is `Anchor` and `Builder` which conforms to `ConstraintProducer`, you can extend **EasyAnchor** easily by conform to `ConstraintProducer`. For example
 
 ```swift
 // This accepts a list of views, and build constraints
@@ -400,7 +400,7 @@ activate(awesomeLayout)
 
 Well, `Anchor` is for making `constraints` between 2 views. If you want to make `constraints` for multiple views at once, you can use multiple `Anchor`. There are some tasks that you do often, let `Builder` help you. These method below use `Builder` under the hood
 
-**Anchors** has a set of builders to help you avoid repetitive tasks and build UIs quickly 😎
+**EasyAnchor** has a set of builders to help you avoid repetitive tasks and build UIs quickly 😎
 
 #### Apply
 
@@ -481,21 +481,21 @@ activate(
 
 ## Installation
 
-**Anchors** is available through [CocoaPods](http://cocoapods.org). To install
+**EasyAnchor** is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Anchors'
+pod 'EasyAnchor'
 ```
 
-**Anchors** is also available through [Carthage](https://github.com/Carthage/Carthage).
+**EasyAnchor** is also available through [Carthage](https://github.com/Carthage/Carthage).
 To install just write into your Cartfile:
 
 ```ruby
-github "onmyway133/Anchors"
+github "onmyway133/EasyAnchor"
 ```
 
-**Anchors** can also be installed manually. Just download and drop `Sources` folders in your project.
+**EasyAnchor** can also be installed manually. Just download and drop `Sources` folders in your project.
 
 ## Author
 
@@ -503,8 +503,8 @@ Khoa Pham, onmyway133@gmail.com
 
 ## Contributing
 
-We would love you to contribute to **Anchors**, check the [CONTRIBUTING](https://github.com/onmyway133/Anchors/blob/master/CONTRIBUTING.md) file for more info.
+We would love you to contribute to **EasyAnchor**, check the [CONTRIBUTING](https://github.com/onmyway133/EasyAnchor/blob/master/CONTRIBUTING.md) file for more info.
 
 ## License
 
-**Anchors** is available under the MIT license. See the [LICENSE](https://github.com/onmyway133/Anchors/blob/master/LICENSE.md) file for more info.
+**EasyAnchor** is available under the MIT license. See the [LICENSE](https://github.com/onmyway133/EasyAnchor/blob/master/LICENSE.md) file for more info.

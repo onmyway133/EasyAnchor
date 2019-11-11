@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "1120"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D5C6293F1C3A7FAA007F7B7C"
-               BuildableName = "Anchors.framework"
-               BlueprintName = "Anchors-Mac"
-               ReferencedContainer = "container:Anchors.xcodeproj">
+               BlueprintIdentifier = "D23B9F241FA90E94008363A1"
+               BuildableName = "EasyAnchor_tvOS.framework"
+               BlueprintName = "EasyAnchor-tvOS"
+               ReferencedContainer = "container:EasyAnchor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,28 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D5C629481C3A7FAA007F7B7C"
-               BuildableName = "Anchors-Mac-Tests.xctest"
-               BlueprintName = "Anchors-Mac-Tests"
-               ReferencedContainer = "container:Anchors.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D5C6293F1C3A7FAA007F7B7C"
-            BuildableName = "Anchors.framework"
-            BlueprintName = "Anchors-Mac"
-            ReferencedContainer = "container:Anchors.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -61,17 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D5C6293F1C3A7FAA007F7B7C"
-            BuildableName = "Anchors.framework"
-            BlueprintName = "Anchors-Mac"
-            ReferencedContainer = "container:Anchors.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -82,10 +50,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D5C6293F1C3A7FAA007F7B7C"
-            BuildableName = "Anchors.framework"
-            BlueprintName = "Anchors-Mac"
-            ReferencedContainer = "container:Anchors.xcodeproj">
+            BlueprintIdentifier = "D23B9F241FA90E94008363A1"
+            BuildableName = "EasyAnchor_tvOS.framework"
+            BlueprintName = "EasyAnchor-tvOS"
+            ReferencedContainer = "container:EasyAnchor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

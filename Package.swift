@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Anchors",
+    name: "EasyAnchor",
     platforms: [
         .macOS(.v10_11),
         .iOS(.v9),
@@ -12,17 +12,17 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Anchors",
-            targets: ["Anchors"]),
+            name: "EasyAnchor",
+            targets: ["EasyAnchor"]),
     ],
     targets: [
         .target(
-            name: "Anchors",
+            name: "EasyAnchor",
             path: "Sources"
         ),
         .testTarget(
-            name: "AnchorsTests",
-            dependencies: ["Anchors"]),
+            name: "EasyAnchorTests",
+            dependencies: ["EasyAnchor"]),
     ],
     swiftLanguageVersions: [.v5]
 )

@@ -1,5 +1,5 @@
 import XCTest
-@testable import Anchors
+@testable import EasyAnchor
 
 class Tests: XCTestCase {
 

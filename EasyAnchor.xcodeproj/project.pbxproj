@@ -78,8 +78,8 @@
 		D2D43D701EC7457D00065343 /* ConstraintProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D6C1EC7457D00065343 /* ConstraintProducer.swift */; };
 		D2D43D721EC7458500065343 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D711EC7458500065343 /* Types.swift */; };
 		D2D43D731EC7458500065343 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D43D711EC7458500065343 /* Types.swift */; };
-		D5B2E8AA1C3A780C00C0327D /* Anchors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Anchors.framework */; };
-		D5C6294A1C3A7FAA007F7B7C /* Anchors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Anchors.framework */; };
+		D5B2E8AA1C3A780C00C0327D /* EasyAnchor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* EasyAnchor.framework */; };
+		D5C6294A1C3A7FAA007F7B7C /* EasyAnchor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* EasyAnchor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,10 +100,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D23B9F251FA90E94008363A1 /* Anchors_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Anchors_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D23B9F251FA90E94008363A1 /* EasyAnchor_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyAnchor_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23B9F271FA90E94008363A1 /* Anchors_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Anchors_tvOS.h; sourceTree = "<group>"; };
-		D23B9F281FA90E94008363A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D25EE5FB226A57EE0040D686 /* Anchors.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Anchors.podspec; sourceTree = "<group>"; };
+		D23B9F281FA90E94008363A1 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		D25EE5FB226A57EE0040D686 /* EasyAnchor.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = EasyAnchor.podspec; sourceTree = "<group>"; };
 		D25EE5FC226A57EE0040D686 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D2873DAF1F030CB4004F4396 /* LayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		D296834E1EBD19BE001E62CB /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
@@ -130,12 +130,10 @@
 		D2D43D6B1EC7457D00065343 /* Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchors.swift; sourceTree = "<group>"; };
 		D2D43D6C1EC7457D00065343 /* ConstraintProducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintProducer.swift; sourceTree = "<group>"; };
 		D2D43D711EC7458500065343 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
-		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
-		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
-		D5B2E89F1C3A780C00C0327D /* Anchors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Anchors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5B2E8A91C3A780C00C0327D /* Anchors-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Anchors-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629401C3A7FAA007F7B7C /* Anchors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Anchors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629491C3A7FAA007F7B7C /* Anchors-Mac-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Anchors-Mac-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B2E89F1C3A780C00C0327D /* EasyAnchor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyAnchor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B2E8A91C3A780C00C0327D /* EasyAnchor-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EasyAnchor-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5C629401C3A7FAA007F7B7C /* EasyAnchor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyAnchor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5C629491C3A7FAA007F7B7C /* EasyAnchor-Mac-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EasyAnchor-Mac-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C6298B1C3A8BBD007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D5C6298C1C3A8BBD007F7B7C /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
 		D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
@@ -161,7 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5B2E8AA1C3A780C00C0327D /* Anchors.framework in Frameworks */,
+				D5B2E8AA1C3A780C00C0327D /* EasyAnchor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,22 +174,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C6294A1C3A7FAA007F7B7C /* Anchors.framework in Frameworks */,
+				D5C6294A1C3A7FAA007F7B7C /* EasyAnchor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D23B9F261FA90E94008363A1 /* Anchors-tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				D23B9F271FA90E94008363A1 /* Anchors_tvOS.h */,
-				D23B9F281FA90E94008363A1 /* Info.plist */,
-			);
-			path = "Anchors-tvOS";
-			sourceTree = "<group>";
-		};
 		D2D43D2D1EC7450300065343 /* Anchor */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,14 +242,11 @@
 			isa = PBXGroup;
 			children = (
 				D2D04765234B51F00005D09D /* Package.swift */,
-				D25EE5FB226A57EE0040D686 /* Anchors.podspec */,
+				D25EE5FB226A57EE0040D686 /* EasyAnchor.podspec */,
 				D25EE5FC226A57EE0040D686 /* README.md */,
-				D500FD111C3AABED00782D78 /* Playground-iOS.playground */,
-				D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */,
 				D5C629691C3A809D007F7B7C /* Sources */,
-				D5C6295C1C3A800E007F7B7C /* Anchors */,
-				D5C6298F1C3A8BDA007F7B7C /* AnchorsTests */,
-				D23B9F261FA90E94008363A1 /* Anchors-tvOS */,
+				D5C6295C1C3A800E007F7B7C /* EasyAnchor */,
+				D5C6298F1C3A8BDA007F7B7C /* EasyAnchorTests */,
 				D5B2E8A01C3A780C00C0327D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -268,22 +254,24 @@
 		D5B2E8A01C3A780C00C0327D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5B2E89F1C3A780C00C0327D /* Anchors.framework */,
-				D5B2E8A91C3A780C00C0327D /* Anchors-iOS-Tests.xctest */,
-				D5C629401C3A7FAA007F7B7C /* Anchors.framework */,
-				D5C629491C3A7FAA007F7B7C /* Anchors-Mac-Tests.xctest */,
-				D23B9F251FA90E94008363A1 /* Anchors_tvOS.framework */,
+				D5B2E89F1C3A780C00C0327D /* EasyAnchor.framework */,
+				D5B2E8A91C3A780C00C0327D /* EasyAnchor-iOS-Tests.xctest */,
+				D5C629401C3A7FAA007F7B7C /* EasyAnchor.framework */,
+				D5C629491C3A7FAA007F7B7C /* EasyAnchor-Mac-Tests.xctest */,
+				D23B9F251FA90E94008363A1 /* EasyAnchor_tvOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D5C6295C1C3A800E007F7B7C /* Anchors */ = {
+		D5C6295C1C3A800E007F7B7C /* EasyAnchor */ = {
 			isa = PBXGroup;
 			children = (
+				D23B9F271FA90E94008363A1 /* Anchors_tvOS.h */,
+				D23B9F281FA90E94008363A1 /* Info-tvOS.plist */,
 				D5C6298B1C3A8BBD007F7B7C /* Info-iOS.plist */,
 				D5C6298C1C3A8BBD007F7B7C /* Info-Mac.plist */,
 			);
-			path = Anchors;
+			path = EasyAnchor;
 			sourceTree = "<group>";
 		};
 		D5C629691C3A809D007F7B7C /* Sources */ = {
@@ -298,7 +286,7 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		D5C6298F1C3A8BDA007F7B7C /* AnchorsTests */ = {
+		D5C6298F1C3A8BDA007F7B7C /* EasyAnchorTests */ = {
 			isa = PBXGroup;
 			children = (
 				D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */,
@@ -306,7 +294,7 @@
 				D296834E1EBD19BE001E62CB /* Tests.swift */,
 				D296835D1EBDBA37001E62CB /* TestCase+Extensions.swift */,
 			);
-			path = AnchorsTests;
+			path = EasyAnchorTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,9 +325,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D23B9F241FA90E94008363A1 /* Anchors-tvOS */ = {
+		D23B9F241FA90E94008363A1 /* EasyAnchor-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D23B9F2A1FA90E94008363A1 /* Build configuration list for PBXNativeTarget "Anchors-tvOS" */;
+			buildConfigurationList = D23B9F2A1FA90E94008363A1 /* Build configuration list for PBXNativeTarget "EasyAnchor-tvOS" */;
 			buildPhases = (
 				D23B9F201FA90E94008363A1 /* Sources */,
 				D23B9F211FA90E94008363A1 /* Frameworks */,
@@ -350,14 +338,14 @@
 			);
 			dependencies = (
 			);
-			name = "Anchors-tvOS";
+			name = "EasyAnchor-tvOS";
 			productName = "Anchors-tvOS";
-			productReference = D23B9F251FA90E94008363A1 /* Anchors_tvOS.framework */;
+			productReference = D23B9F251FA90E94008363A1 /* EasyAnchor_tvOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D5B2E89E1C3A780C00C0327D /* Anchors-iOS */ = {
+		D5B2E89E1C3A780C00C0327D /* EasyAnchor-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "Anchors-iOS" */;
+			buildConfigurationList = D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "EasyAnchor-iOS" */;
 			buildPhases = (
 				D5B2E89A1C3A780C00C0327D /* Sources */,
 				D5B2E89B1C3A780C00C0327D /* Frameworks */,
@@ -368,14 +356,14 @@
 			);
 			dependencies = (
 			);
-			name = "Anchors-iOS";
+			name = "EasyAnchor-iOS";
 			productName = Anchors;
-			productReference = D5B2E89F1C3A780C00C0327D /* Anchors.framework */;
+			productReference = D5B2E89F1C3A780C00C0327D /* EasyAnchor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D5B2E8A81C3A780C00C0327D /* Anchors-iOS-Tests */ = {
+		D5B2E8A81C3A780C00C0327D /* EasyAnchor-iOS-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5B2E8B61C3A780C00C0327D /* Build configuration list for PBXNativeTarget "Anchors-iOS-Tests" */;
+			buildConfigurationList = D5B2E8B61C3A780C00C0327D /* Build configuration list for PBXNativeTarget "EasyAnchor-iOS-Tests" */;
 			buildPhases = (
 				D5B2E8A51C3A780C00C0327D /* Sources */,
 				D5B2E8A61C3A780C00C0327D /* Frameworks */,
@@ -386,14 +374,14 @@
 			dependencies = (
 				D5B2E8AC1C3A780C00C0327D /* PBXTargetDependency */,
 			);
-			name = "Anchors-iOS-Tests";
+			name = "EasyAnchor-iOS-Tests";
 			productName = AnchorsTests;
-			productReference = D5B2E8A91C3A780C00C0327D /* Anchors-iOS-Tests.xctest */;
+			productReference = D5B2E8A91C3A780C00C0327D /* EasyAnchor-iOS-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D5C6293F1C3A7FAA007F7B7C /* Anchors-Mac */ = {
+		D5C6293F1C3A7FAA007F7B7C /* EasyAnchor-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5C629511C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "Anchors-Mac" */;
+			buildConfigurationList = D5C629511C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "EasyAnchor-Mac" */;
 			buildPhases = (
 				D5C6293B1C3A7FAA007F7B7C /* Sources */,
 				D5C6293C1C3A7FAA007F7B7C /* Frameworks */,
@@ -404,14 +392,14 @@
 			);
 			dependencies = (
 			);
-			name = "Anchors-Mac";
+			name = "EasyAnchor-Mac";
 			productName = "Anchors-Mac";
-			productReference = D5C629401C3A7FAA007F7B7C /* Anchors.framework */;
+			productReference = D5C629401C3A7FAA007F7B7C /* EasyAnchor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D5C629481C3A7FAA007F7B7C /* Anchors-Mac-Tests */ = {
+		D5C629481C3A7FAA007F7B7C /* EasyAnchor-Mac-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5C629541C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "Anchors-Mac-Tests" */;
+			buildConfigurationList = D5C629541C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "EasyAnchor-Mac-Tests" */;
 			buildPhases = (
 				D5C629451C3A7FAA007F7B7C /* Sources */,
 				D5C629461C3A7FAA007F7B7C /* Frameworks */,
@@ -422,9 +410,9 @@
 			dependencies = (
 				D5C6294C1C3A7FAA007F7B7C /* PBXTargetDependency */,
 			);
-			name = "Anchors-Mac-Tests";
+			name = "EasyAnchor-Mac-Tests";
 			productName = "Anchors-MacTests";
-			productReference = D5C629491C3A7FAA007F7B7C /* Anchors-Mac-Tests.xctest */;
+			productReference = D5C629491C3A7FAA007F7B7C /* EasyAnchor-Mac-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -459,7 +447,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D5B2E8991C3A780C00C0327D /* Build configuration list for PBXProject "Anchors" */;
+			buildConfigurationList = D5B2E8991C3A780C00C0327D /* Build configuration list for PBXProject "EasyAnchor" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -472,11 +460,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5B2E89E1C3A780C00C0327D /* Anchors-iOS */,
-				D5C6293F1C3A7FAA007F7B7C /* Anchors-Mac */,
-				D5B2E8A81C3A780C00C0327D /* Anchors-iOS-Tests */,
-				D5C629481C3A7FAA007F7B7C /* Anchors-Mac-Tests */,
-				D23B9F241FA90E94008363A1 /* Anchors-tvOS */,
+				D5B2E89E1C3A780C00C0327D /* EasyAnchor-iOS */,
+				D5C6293F1C3A7FAA007F7B7C /* EasyAnchor-Mac */,
+				D5B2E8A81C3A780C00C0327D /* EasyAnchor-iOS-Tests */,
+				D5C629481C3A7FAA007F7B7C /* EasyAnchor-Mac-Tests */,
+				D23B9F241FA90E94008363A1 /* EasyAnchor-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -630,12 +618,12 @@
 /* Begin PBXTargetDependency section */
 		D5B2E8AC1C3A780C00C0327D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D5B2E89E1C3A780C00C0327D /* Anchors-iOS */;
+			target = D5B2E89E1C3A780C00C0327D /* EasyAnchor-iOS */;
 			targetProxy = D5B2E8AB1C3A780C00C0327D /* PBXContainerItemProxy */;
 		};
 		D5C6294C1C3A7FAA007F7B7C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D5C6293F1C3A7FAA007F7B7C /* Anchors-Mac */;
+			target = D5C6293F1C3A7FAA007F7B7C /* EasyAnchor-Mac */;
 			targetProxy = D5C6294B1C3A7FAA007F7B7C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -656,7 +644,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Anchors-tvOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EasyAnchor/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Anchors-tvOS";
@@ -684,7 +672,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Anchors-tvOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EasyAnchor/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Anchors-tvOS";
@@ -821,12 +809,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Anchors/Info-iOS.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EasyAnchor/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Anchors-iOS";
-				PRODUCT_NAME = Anchors;
+				PRODUCT_NAME = EasyAnchor;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -841,12 +829,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Anchors/Info-iOS.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EasyAnchor/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Anchors-iOS";
-				PRODUCT_NAME = Anchors;
+				PRODUCT_NAME = EasyAnchor;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -889,12 +877,12 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Anchors/Info-Mac.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EasyAnchor/Info-Mac.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Anchors-Mac";
-				PRODUCT_NAME = Anchors;
+				PRODUCT_NAME = EasyAnchor;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -912,12 +900,12 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Anchors/Info-Mac.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EasyAnchor/Info-Mac.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Anchors-Mac";
-				PRODUCT_NAME = Anchors;
+				PRODUCT_NAME = EasyAnchor;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -961,7 +949,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D23B9F2A1FA90E94008363A1 /* Build configuration list for PBXNativeTarget "Anchors-tvOS" */ = {
+		D23B9F2A1FA90E94008363A1 /* Build configuration list for PBXNativeTarget "EasyAnchor-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D23B9F2B1FA90E94008363A1 /* Debug */,
@@ -970,7 +958,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5B2E8991C3A780C00C0327D /* Build configuration list for PBXProject "Anchors" */ = {
+		D5B2E8991C3A780C00C0327D /* Build configuration list for PBXProject "EasyAnchor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5B2E8B11C3A780C00C0327D /* Debug */,
@@ -979,7 +967,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "Anchors-iOS" */ = {
+		D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "EasyAnchor-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5B2E8B41C3A780C00C0327D /* Debug */,
@@ -988,7 +976,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5B2E8B61C3A780C00C0327D /* Build configuration list for PBXNativeTarget "Anchors-iOS-Tests" */ = {
+		D5B2E8B61C3A780C00C0327D /* Build configuration list for PBXNativeTarget "EasyAnchor-iOS-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5B2E8B71C3A780C00C0327D /* Debug */,
@@ -997,7 +985,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5C629511C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "Anchors-Mac" */ = {
+		D5C629511C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "EasyAnchor-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5C629521C3A7FAA007F7B7C /* Debug */,
@@ -1006,7 +994,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5C629541C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "Anchors-Mac-Tests" */ = {
+		D5C629541C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "EasyAnchor-Mac-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5C629551C3A7FAA007F7B7C /* Debug */,
