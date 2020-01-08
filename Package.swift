@@ -19,10 +19,7 @@ let package = Package(
         .target(
             name: "EasyAnchor",
             path: "Sources"
-        ),
-        .testTarget(
-            name: "EasyAnchorTests",
-            dependencies: ["EasyAnchor"]),
+        )
     ],
     swiftLanguageVersions: [.v5]
 )
