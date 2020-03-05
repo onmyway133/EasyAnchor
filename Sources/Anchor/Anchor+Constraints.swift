@@ -57,11 +57,11 @@ fileprivate extension Anchor {
         let constraint = NSLayoutConstraint(
           item: item,
           attribute: $0.attribute,
-          relatedBy: relationValue,
+          relatedBy: relationValue ?? .equal,
           toItem: nil,
           attribute: .notAnAttribute,
-          multiplier: multiplierValue,
-          constant: $0.constant
+          multiplier: multiplierValue ?? 1,
+          constant: $0.constant ?? 0
         )
 
         return constraint
@@ -76,11 +76,11 @@ fileprivate extension Anchor {
       let constraint = NSLayoutConstraint(
         item: item,
         attribute: pin.attribute,
-        relatedBy: relationValue,
+        relatedBy: relationValue ?? .equal,
         toItem: anotherAnchor.item,
         attribute: anotherPin.attribute,
-        multiplier: multiplierValue,
-        constant: pin.constant
+        multiplier: multiplierValue ?? 1,
+        constant: pin.constant ?? 0
       )
 
       return constraint
