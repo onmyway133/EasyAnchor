@@ -32,18 +32,35 @@ public extension Anchor {
   }
 }
 
+extension Attribute {
+    func isEqual(to attribute: Attribute) -> Bool {
+        switch self {
+        case .leading, .left:
+            return [.leading, .left].contains(attribute)
+        case .leadingMargin, .leftMargin:
+            return [.leadingMargin, .leftMargin].contains(attribute)
+        case .trailing, .right:
+            return [.trailing, .right].contains(attribute)
+        case .trailingMargin, .rightMargin:
+            return [.trailingMargin, .rightMargin].contains(attribute)
+        default:
+            return self == attribute
+        }
+    }
+}
+
 extension NSLayoutConstraint {
-    func isEqual(to anchor: Anchor,_ firstItem: View? = nil) -> Bool {
+    func isEqual(to anchor: Anchor,_ firstItem: NSObject? = nil, isInverted: Bool = false) -> Bool {
         if let firstItem = firstItem {
             guard self.firstItem as? NSObject == firstItem else {
                 return false
             }
 
-            guard self.secondItem as? NSObject == anchor.item as? View else {
+            guard self.secondItem as? NSObject == anchor.item as? NSObject else {
                 return false
             }
         } else {
-            guard self.firstItem as? NSObject == anchor.item as? View else {
+            guard self.firstItem as? NSObject == anchor.item as? NSObject else {
                 return false
             }
         }
@@ -52,14 +69,22 @@ extension NSLayoutConstraint {
             return false
         }
 
-        guard anchor.pins.contains(where: {
-            return $0.attribute == self.firstAttribute && {
-                if let constant = $0.constant {
+        guard anchor.pins.contains(where: { pin in
+            let isAttributedEqual: Bool = {
+                if isInverted && self.secondAttribute != .notAnAttribute {
+                    return pin.attribute.isEqual(to: self.secondAttribute)
+                }
+
+                return pin.attribute.isEqual(to: self.firstAttribute)
+            }()
+
+            return isAttributedEqual && {
+                if let constant = pin.constant {
                     return constant == self.constant
                 }
 
                 return true
-            }($0)
+            }()
         }) else {
             return false
         }
@@ -82,23 +107,39 @@ extension NSLayoutConstraint {
 
 public extension Anchor {
     func findByContent() -> [NSLayoutConstraint] {
-        guard let view = item as? View else {
+        guard let object = item as? NSObject else {
             return []
         }
 
         let constraints: [NSLayoutConstraint] = {
             if case .anchor(let relatedTo) = self.toValue {
-                return (relatedTo.item as? View)?.constraints.filter {
-                    $0.isEqual(to: relatedTo, view)
+                switch relatedTo.item {
+                case let guide as LayoutGuide:
+                    return guide.owningView?.constraints.filter {
+                        $0.isEqual(to: relatedTo, object, isInverted: true)
+                    }
+                case let view as View:
+                    return view.constraints.filter {
+                        $0.isEqual(to: relatedTo, object, isInverted: true)
+                    }
+                default:
+                    fatalError("Not implemented")
                 }
             }
 
-            var constraints: [NSLayoutConstraint] = view.superview?.constraints ?? []
-            if self.pins.contains(where: { $0.attribute == .width || $0.attribute == .height }) {
-                constraints.append(contentsOf: view.constraints)
-            }
+            switch object {
+            case let guide as LayoutGuide:
+                return guide.owningView?.superview?.constraints ?? []
+            case let view as View:
+                var constraints: [NSLayoutConstraint] = view.superview?.constraints ?? []
+                if self.pins.contains(where: { $0.attribute == .width || $0.attribute == .height }) {
+                    constraints.append(contentsOf: view.constraints)
+                }
 
-            return constraints
+                return constraints
+            default:
+                fatalError("Not implemented")
+            }
 
         }() ?? []
 
